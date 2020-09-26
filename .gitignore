@@ -1,0 +1,22 @@
+### BEGIN PROJECT
+private/
+docs/
+
+### BEGIN OS
+.DS_Store
+
+### BEGIN C#
+#use `./scripts/<os>/create` script
+
+## Solution file
+NetSpider.sln
+
+## Vampiro project files
+NetVampiro/NetVampiro.csproj
+
+# Compiled class file
+NetVampiro/bin
+NetVampiro/obj
+
+### EOF
+
