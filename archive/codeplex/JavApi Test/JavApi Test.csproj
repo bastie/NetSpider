@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE551004-617F-4A08-A856-8D92A5C448AC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>biz.ritter.javapi.test</RootNamespace>
+    <AssemblyName>JavApi Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>biz.ritter.javapi.io.FileReaderTest</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="java\io\FileReaderTest.cs" />
+    <Compile Include="java\io\FileTest.cs" />
+    <Compile Include="java\lang\ClazzTest.cs" />
+    <Compile Include="java\text\MessageFormatTest.cs" />
+    <Compile Include="java\text\NumberFormatTest.cs" />
+    <Compile Include="java\text\SimpleDateFormatTest.cs" />
+    <Compile Include="java\util\ArraysTest.cs" />
+    <Compile Include="org\apache\commons\compress\bzip2\BZip2Test.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="java\util\StringTokenizerTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavApi Commons Codec %28Apache Port%29\JavApi Commons Codec %28Apache Port%29.csproj">
+      <Project>{C2E3F4CC-E15D-4970-B433-EB712E30071F}</Project>
+      <Name>JavApi Commons Codec %28Apache Port%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi Commons collections %28Apache Port%29\JavApi Commons collections %28Apache Port%29.csproj">
+      <Project>{61AA3892-0CAA-4982-AA7D-7672F82052DE}</Project>
+      <Name>JavApi Commons collections %28Apache Port%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi Commons Compress %28Apache Port%29\JavApi Commons Compress %28Apache Port%29.csproj">
+      <Project>{780F1533-D766-436A-B10B-E8CF50E39B5D}</Project>
+      <Name>JavApi Commons Compress %28Apache Port%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi jzlib\JavApi jzlib.csproj">
+      <Project>{8FE28700-D0E8-494D-B66D-EFB35C58F495}</Project>
+      <Name>JavApi jzlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi Language Binding %28W3C DOM Port%29\JavApi Language Binding %28W3C Port%29.csproj">
+      <Project>{4DDB35C5-7E6A-463B-B670-B3C770C394CB}</Project>
+      <Name>JavApi Language Binding %28W3C Port%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi SevenZip\JavApi SevenZip.csproj">
+      <Project>{A75E4375-234F-4F9B-9A30-EFF779FA4DFF}</Project>
+      <Name>JavApi SevenZip</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApiMail\JavApi Mail.csproj">
+      <Project>{E0D7CB7E-8171-44A3-91AE-408E3D5A4F9C}</Project>
+      <Name>JavApi Mail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi\JavApi.csproj">
+      <Project>{C9FA08E8-9DE4-40C8-A537-8AB7798F3E96}</Project>
+      <Name>JavApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Test References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="org\apache\commons\compress\bzip2\ASL2.bz2" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

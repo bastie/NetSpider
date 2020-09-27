@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{780F1533-D766-436A-B10B-E8CF50E39B5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JavApi_Common_Compress__Apache_Port_</RootNamespace>
+    <AssemblyName>JavApi Common Compress %28Apache Port%29</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="org\apache\commons\compress\archivers\zip\AbstractUnicodeExtraField.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ar\ArArchiveEntry.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ar\ArArchiveInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ar\ArArchiveOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ArchiveEntry.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ArchiveException.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ArchiveInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ArchiveOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ArchiveStreamFactory.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\ArchiveUtils.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\AsiExtraField.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\bzip2\BZip2CompressorInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\bzip2\BZip2CompressorOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\bzip2\BZip2Constants.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\bzip2\BZip2Utils.cs" />
+    <Compile Include="org\apache\commons\compress\changes\Change.cs" />
+    <Compile Include="org\apache\commons\compress\changes\ChangeSet.cs" />
+    <Compile Include="org\apache\commons\compress\changes\ChangeSetPerformer.cs" />
+    <Compile Include="org\apache\commons\compress\changes\ChangeSetResults.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\CompressorException.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\CompressorInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\CompressorOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\CompressorStreamFactory.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\cpio\CpioArchiveEntry.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\cpio\CpioArchiveInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\cpio\CpioArchiveOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\cpio\CpioConstants.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\cpio\CpioUtil.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\bzip2\CRC.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ExtraFieldUtils.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\FallbackZipEncoding.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\GeneralPurposeBit.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\gzip\GzipCompressorInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\gzip\GzipCompressorOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\gzip\GzipUtils.cs" />
+    <Compile Include="org\apache\commons\compress\utils\IOUtils.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\jar\JarArchiveEntry.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\jar\JarArchiveInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\jar\JarArchiveOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\JarMarker.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\Lister.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\NioZipEncoding.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="org\apache\commons\compress\compressors\bzip2\Rand.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\Simple8BitZipEncoding.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\tar\TarArchiveEntry.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\tar\TarArchiveInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\tar\TarArchiveOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\tar\TarBuffer.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\tar\TarConstants.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\tar\TarUtils.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\UnicodeCommentExtraField.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\UnicodePathExtraField.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\UnixStat.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\UnparseableExtraFieldData.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\UnrecognizedExtraField.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\UnsupportedZipFeatureException.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipArchiveEntry.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipArchiveInputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipArchiveOutputStream.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipEncoding.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipEncodingHelper.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipExtraField.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipFile.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipLong.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipShort.cs" />
+    <Compile Include="org\apache\commons\compress\archivers\zip\ZipUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavApi\JavApi.csproj">
+      <Project>{C9FA08E8-9DE4-40C8-A537-8AB7798F3E96}</Project>
+      <Name>JavApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

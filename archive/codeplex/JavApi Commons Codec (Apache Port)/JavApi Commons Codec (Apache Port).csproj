@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2E3F4CC-E15D-4970-B433-EB712E30071F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JavApi_Commons_Codec__Apache_Port_</RootNamespace>
+    <AssemblyName>JavApi Commons Codec %28Apache Port%29</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="org\apache\commons\codec\BinaryDecoder.cs" />
+    <Compile Include="org\apache\commons\codec\BinaryEncoder.cs" />
+    <Compile Include="org\apache\commons\codec\binary\Base64.cs" />
+    <Compile Include="org\apache\commons\codec\binary\Base64InputStream.cs" />
+    <Compile Include="org\apache\commons\codec\binary\Base64OutputStream.cs" />
+    <Compile Include="org\apache\commons\codec\binary\BinaryCodec.cs" />
+    <Compile Include="org\apache\commons\codec\binary\Hex.cs" />
+    <Compile Include="org\apache\commons\codec\binary\StringUtils.cs" />
+    <Compile Include="org\apache\commons\codec\CharEncoding.cs" />
+    <Compile Include="org\apache\commons\codec\Decoder.cs" />
+    <Compile Include="org\apache\commons\codec\DecoderException.cs" />
+    <Compile Include="org\apache\commons\codec\digest\DigestUtils.cs" />
+    <Compile Include="org\apache\commons\codec\Encoder.cs" />
+    <Compile Include="org\apache\commons\codec\EncoderException.cs" />
+    <Compile Include="org\apache\commons\codec\language\Caverphone.cs" />
+    <Compile Include="org\apache\commons\codec\language\DoubleMetaphone.cs" />
+    <Compile Include="org\apache\commons\codec\language\Metaphone.cs" />
+    <Compile Include="org\apache\commons\codec\language\RefinedSoundex.cs" />
+    <Compile Include="org\apache\commons\codec\language\Soundex.cs" />
+    <Compile Include="org\apache\commons\codec\language\SoundexUtils.cs" />
+    <Compile Include="org\apache\commons\codec\net\BCodec.cs" />
+    <Compile Include="org\apache\commons\codec\net\QCodec.cs" />
+    <Compile Include="org\apache\commons\codec\net\QuotedPrintableCodec.cs" />
+    <Compile Include="org\apache\commons\codec\net\RFC1522Codec.cs" />
+    <Compile Include="org\apache\commons\codec\net\URLCodec.cs" />
+    <Compile Include="org\apache\commons\codec\net\Utils.cs" />
+    <Compile Include="org\apache\commons\codec\StringDecoder.cs" />
+    <Compile Include="org\apache\commons\codec\StringEncoder.cs" />
+    <Compile Include="org\apache\commons\codec\StringEncoderComparator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavApi\JavApi.csproj">
+      <Project>{C9FA08E8-9DE4-40C8-A537-8AB7798F3E96}</Project>
+      <Name>JavApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

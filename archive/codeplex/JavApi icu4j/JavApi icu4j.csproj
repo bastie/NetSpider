@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0664A92D-1A04-4814-94C6-806982A1B44A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JavApi_icu4j</RootNamespace>
+    <AssemblyName>JavApi icu4j</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavApi\JavApi.csproj">
+      <Project>{C9FA08E8-9DE4-40C8-A537-8AB7798F3E96}</Project>
+      <Name>JavApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="com\ibm\icu\impl\Assert.cs" />
+    <Content Include="com\ibm\icu\impl\BMPSet.java" />
+    <Content Include="com\ibm\icu\impl\BOCU.java" />
+    <Content Include="com\ibm\icu\impl\CacheBase.java" />
+    <Content Include="com\ibm\icu\impl\CalendarAstronomer.java" />
+    <Content Include="com\ibm\icu\impl\CalendarCache.java" />
+    <Content Include="com\ibm\icu\impl\CalendarData.java" />
+    <Content Include="com\ibm\icu\impl\CalendarUtil.java" />
+    <Content Include="com\ibm\icu\impl\CharacterIteratorWrapper.java" />
+    <Content Include="com\ibm\icu\impl\CharTrie.java" />
+    <Content Include="com\ibm\icu\impl\CurrencyData.java" />
+    <Content Include="com\ibm\icu\impl\data\BreakIteratorRules.java" />
+    <Content Include="com\ibm\icu\impl\data\BreakIteratorRules_th.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_da.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_da_DK.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_de.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_de_AT.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_de_DE.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_el.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_el_GR.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_en.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_en_CA.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_en_GB.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_en_US.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_es.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_es_MX.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_fr.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_fr_CA.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_fr_FR.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_it.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_it_IT.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_iw.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_iw_IL.java" />
+    <Content Include="com\ibm\icu\impl\data\HolidayBundle_ja_JP.java" />
+    <Content Include="com\ibm\icu\impl\data\ResourceReader.java" />
+    <Content Include="com\ibm\icu\impl\data\TokenIterator.java" />
+    <Content Include="com\ibm\icu\impl\DateNumberFormat.java" />
+    <Content Include="com\ibm\icu\impl\Differ.java" />
+    <Content Include="com\ibm\icu\impl\duration\BasicDurationFormat.java" />
+    <Content Include="com\ibm\icu\impl\duration\BasicDurationFormatter.java" />
+    <Content Include="com\ibm\icu\impl\duration\BasicDurationFormatterFactory.java" />
+    <Content Include="com\ibm\icu\impl\duration\BasicPeriodBuilderFactory.java" />
+    <Content Include="com\ibm\icu\impl\duration\BasicPeriodFormatter.java" />
+    <Content Include="com\ibm\icu\impl\duration\BasicPeriodFormatterFactory.java" />
+    <Content Include="com\ibm\icu\impl\duration\BasicPeriodFormatterService.java" />
+    <Content Include="com\ibm\icu\impl\duration\DateFormatter.java" />
+    <Content Include="com\ibm\icu\impl\duration\DurationFormatter.java" />
+    <Content Include="com\ibm\icu\impl\duration\DurationFormatterFactory.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\DataRecord.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\PeriodFormatterData.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\PeriodFormatterDataService.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\RecordReader.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\RecordWriter.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\ResourceBasedPeriodFormatterDataService.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\Utils.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\XMLRecordReader.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\XMLRecordWriter.java" />
+    <Content Include="com\ibm\icu\impl\duration\impl\YMDDateFormatter.java" />
+    <Content Include="com\ibm\icu\impl\duration\Period.java" />
+    <Content Include="com\ibm\icu\impl\duration\PeriodBuilder.java" />
+    <Content Include="com\ibm\icu\impl\duration\PeriodBuilderFactory.java" />
+    <Content Include="com\ibm\icu\impl\duration\PeriodFormatter.java" />
+    <Content Include="com\ibm\icu\impl\duration\PeriodFormatterFactory.java" />
+    <Content Include="com\ibm\icu\impl\duration\PeriodFormatterService.java" />
+    <Content Include="com\ibm\icu\impl\duration\TimeUnit.java" />
+    <Content Include="com\ibm\icu\impl\duration\TimeUnitConstants.java" />
+    <Content Include="com\ibm\icu\impl\Grego.java" />
+    <Compile Include="com\ibm\icu\impl\ICUBinary.cs" />
+    <Content Include="com\ibm\icu\impl\ICUBinaryStream.java" />
+    <Compile Include="com\ibm\icu\impl\ICUCache.cs" />
+    <Content Include="com\ibm\icu\impl\ICUConfig.java" />
+    <Content Include="com\ibm\icu\impl\ICUCurrencyDisplayInfoProvider.java" />
+    <Content Include="com\ibm\icu\impl\ICUCurrencyMetaInfo.java" />
+    <Compile Include="com\ibm\icu\impl\ICUData.cs" />
+    <Compile Include="com\ibm\icu\impl\ICUDataVersion.cs" />
+    <Compile Include="com\ibm\icu\impl\ICUDebug.cs" />
+    <Content Include="com\ibm\icu\impl\ICULangDataTables.java" />
+    <Content Include="com\ibm\icu\impl\ICULocaleService.java" />
+    <Content Include="com\ibm\icu\impl\ICULogger.java" />
+    <Content Include="com\ibm\icu\impl\ICUNotifier.java" />
+    <Content Include="com\ibm\icu\impl\ICURegionDataTables.java" />
+    <Compile Include="com\ibm\icu\impl\ICUResourceBundle.cs" />
+    <Content Include="com\ibm\icu\impl\ICUResourceBundleImpl.java" />
+    <Content Include="com\ibm\icu\impl\ICUResourceBundleReader.java" />
+    <Content Include="com\ibm\icu\impl\ICUResourceTableAccess.java" />
+    <Content Include="com\ibm\icu\impl\ICURWLock.java" />
+    <Content Include="com\ibm\icu\impl\ICUService.java" />
+    <Content Include="com\ibm\icu\impl\IDNA2003.java" />
+    <Compile Include="com\ibm\icu\impl\IllegalIcuArgumentException.cs" />
+    <Content Include="com\ibm\icu\impl\ImplicitCEGenerator.java" />
+    <Content Include="com\ibm\icu\impl\IntTrie.java" />
+    <Content Include="com\ibm\icu\impl\IntTrieBuilder.java" />
+    <Content Include="com\ibm\icu\impl\InvalidFormatException.java" />
+    <Content Include="com\ibm\icu\impl\IterableComparator.java" />
+    <Content Include="com\ibm\icu\impl\JavaTimeZone.java" />
+    <Compile Include="com\ibm\icu\impl\LocaleDisplayNamesImpl.cs" />
+    <Compile Include="com\ibm\icu\impl\LocaleIDParser.cs" />
+    <Compile Include="com\ibm\icu\impl\LocaleIDs.cs" />
+    <Content Include="com\ibm\icu\impl\LocaleUtility.java" />
+    <Compile Include="com\ibm\icu\impl\locale\AsciiUtil.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\BaseLocale.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\Extension.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\InternalLocaleBuilder.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\LanguageTag.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\LocaleExtensions.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\LocaleObjectCache.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\LocaleSyntaxException.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\ParseStatus.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\StringTokenIterator.cs" />
+    <Compile Include="com\ibm\icu\impl\locale\UnicodeLocaleExtension.cs" />
+    <Content Include="com\ibm\icu\impl\MultiComparator.java" />
+    <Compile Include="com\ibm\icu\impl\Norm2AllModes.cs" />
+    <Compile Include="com\ibm\icu\impl\Normalizer2Impl.cs" />
+    <Content Include="com\ibm\icu\impl\OlsonTimeZone.java" />
+    <Content Include="com\ibm\icu\impl\PatternProps.java" />
+    <Content Include="com\ibm\icu\impl\PatternTokenizer.java" />
+    <Content Include="com\ibm\icu\impl\PluralRulesLoader.java" />
+    <Content Include="com\ibm\icu\impl\PropsVectors.java" />
+    <Content Include="com\ibm\icu\impl\Punycode.java" />
+    <Content Include="com\ibm\icu\impl\PVecToTrieCompactHandler.java" />
+    <Content Include="com\ibm\icu\impl\RelativeDateFormat.java" />
+    <Content Include="com\ibm\icu\impl\ReplaceableUCharacterIterator.java" />
+    <Compile Include="com\ibm\icu\impl\ResourceBundleWrapper.cs" />
+    <Content Include="com\ibm\icu\impl\Row.java" />
+    <Content Include="com\ibm\icu\impl\RuleCharacterIterator.java" />
+    <Compile Include="com\ibm\icu\impl\SimpleCache.cs" />
+    <Content Include="com\ibm\icu\impl\SoftCache.java" />
+    <Content Include="com\ibm\icu\impl\SortedSetRelation.java" />
+    <Content Include="com\ibm\icu\impl\StringPrepDataReader.java" />
+    <Content Include="com\ibm\icu\impl\StringUCharacterIterator.java" />
+    <Content Include="com\ibm\icu\impl\TextTrieMap.java" />
+    <Content Include="com\ibm\icu\impl\TimeZoneAdapter.java" />
+    <Content Include="com\ibm\icu\impl\TimeZoneGenericNames.java" />
+    <Content Include="com\ibm\icu\impl\TimeZoneNamesFactoryImpl.java" />
+    <Content Include="com\ibm\icu\impl\TimeZoneNamesImpl.java" />
+    <Content Include="com\ibm\icu\impl\Trie.java" />
+    <Content Include="com\ibm\icu\impl\Trie2.java" />
+    <Content Include="com\ibm\icu\impl\Trie2Writable.java" />
+    <Content Include="com\ibm\icu\impl\Trie2_16.java" />
+    <Content Include="com\ibm\icu\impl\Trie2_32.java" />
+    <Content Include="com\ibm\icu\impl\TrieBuilder.java" />
+    <Content Include="com\ibm\icu\impl\TrieIterator.java" />
+    <Content Include="com\ibm\icu\impl\UBiDiProps.java" />
+    <Compile Include="com\ibm\icu\impl\UCaseProps.cs" />
+    <Content Include="com\ibm\icu\impl\UCharacterIteratorWrapper.java" />
+    <Content Include="com\ibm\icu\impl\UCharacterName.java" />
+    <Content Include="com\ibm\icu\impl\UCharacterNameChoice.java" />
+    <Content Include="com\ibm\icu\impl\UCharacterNameReader.java" />
+    <Compile Include="com\ibm\icu\impl\UCharacterProperty.cs" />
+    <Content Include="com\ibm\icu\impl\UCharacterUtility.java" />
+    <Content Include="com\ibm\icu\impl\UCharArrayIterator.java" />
+    <Content Include="com\ibm\icu\impl\UnicodeRegex.java" />
+    <Content Include="com\ibm\icu\impl\UnicodeSetStringSpan.java" />
+    <Content Include="com\ibm\icu\impl\UPropertyAliases.java" />
+    <Content Include="com\ibm\icu\impl\URLHandler.java" />
+    <Content Include="com\ibm\icu\impl\USerializedSet.java" />
+    <Compile Include="com\ibm\icu\impl\Utility.cs" />
+    <Content Include="com\ibm\icu\impl\UtilityExtensions.java" />
+    <Content Include="com\ibm\icu\impl\UTS46.java" />
+    <Content Include="com\ibm\icu\impl\ZoneMeta.java" />
+    <Content Include="com\ibm\icu\lang\CharSequences.java" />
+    <Compile Include="com\ibm\icu\lang\UCharacter.cs" />
+    <Compile Include="com\ibm\icu\lang\UCharacterCategory.cs" />
+    <Content Include="com\ibm\icu\lang\UCharacterDirection.java" />
+    <Compile Include="com\ibm\icu\lang\UCharacterEnums.cs" />
+    <Content Include="com\ibm\icu\lang\UCharacterNameIterator.java" />
+    <Compile Include="com\ibm\icu\lang\UProperty.cs" />
+    <Compile Include="com\ibm\icu\lang\UScript.cs" />
+    <Content Include="com\ibm\icu\lang\UScriptRun.java" />
+    <Content Include="com\ibm\icu\math\BigDecimal.java" />
+    <Content Include="com\ibm\icu\math\MathContext.java" />
+    <Content Include="com\ibm\icu\text\AlphabeticIndex.java" />
+    <Content Include="com\ibm\icu\text\AnyTransliterator.java" />
+    <Content Include="com\ibm\icu\text\ArabicShaping.java" />
+    <Content Include="com\ibm\icu\text\ArabicShapingException.java" />
+    <Content Include="com\ibm\icu\text\Bidi.java" />
+    <Content Include="com\ibm\icu\text\BidiClassifier.java" />
+    <Content Include="com\ibm\icu\text\BidiLine.java" />
+    <Content Include="com\ibm\icu\text\BidiRun.java" />
+    <Content Include="com\ibm\icu\text\BidiWriter.java" />
+    <Content Include="com\ibm\icu\text\BreakCTDictionary.java" />
+    <Content Include="com\ibm\icu\text\BreakDictionary.java" />
+    <Compile Include="com\ibm\icu\text\BreakIterator.cs" />
+    <Content Include="com\ibm\icu\text\BreakIteratorFactory.java" />
+    <Content Include="com\ibm\icu\text\BreakTransliterator.java" />
+    <Content Include="com\ibm\icu\text\CanonicalIterator.java" />
+    <Content Include="com\ibm\icu\text\CaseFoldTransliterator.java" />
+    <Content Include="com\ibm\icu\text\CharsetDetector.java" />
+    <Content Include="com\ibm\icu\text\CharsetMatch.java" />
+    <Content Include="com\ibm\icu\text\CharsetRecognizer.java" />
+    <Content Include="com\ibm\icu\text\CharsetRecog_2022.java" />
+    <Content Include="com\ibm\icu\text\CharsetRecog_mbcs.java" />
+    <Content Include="com\ibm\icu\text\CharsetRecog_sbcs.java" />
+    <Content Include="com\ibm\icu\text\CharsetRecog_Unicode.java" />
+    <Content Include="com\ibm\icu\text\CharsetRecog_UTF8.java" />
+    <Content Include="com\ibm\icu\text\ChineseDateFormat.java" />
+    <Content Include="com\ibm\icu\text\ChineseDateFormatSymbols.java" />
+    <Content Include="com\ibm\icu\text\CollationElementIterator.java" />
+    <Compile Include="com\ibm\icu\text\CollationKey.cs" />
+    <Content Include="com\ibm\icu\text\CollationParsedRuleBuilder.java" />
+    <Content Include="com\ibm\icu\text\CollationRuleParser.java" />
+    <Compile Include="com\ibm\icu\text\Collator.cs" />
+    <Content Include="com\ibm\icu\text\CollatorReader.java" />
+    <Content Include="com\ibm\icu\text\CollatorServiceShim.java" />
+    <Content Include="com\ibm\icu\text\ComposedCharIter.java" />
+    <Content Include="com\ibm\icu\text\CompoundTransliterator.java" />
+    <Content Include="com\ibm\icu\text\CurrencyDisplayNames.java" />
+    <Content Include="com\ibm\icu\text\CurrencyFormat.java" />
+    <Content Include="com\ibm\icu\text\CurrencyMetaInfo.java" />
+    <Content Include="com\ibm\icu\text\CurrencyPluralInfo.java" />
+    <Content Include="com\ibm\icu\text\DateFormat.java" />
+    <Content Include="com\ibm\icu\text\DateFormatSymbols.java" />
+    <Content Include="com\ibm\icu\text\DateIntervalFormat.java" />
+    <Content Include="com\ibm\icu\text\DateIntervalInfo.java" />
+    <Content Include="com\ibm\icu\text\DateTimePatternGenerator.java" />
+    <Content Include="com\ibm\icu\text\DecimalFormat.java" />
+    <Content Include="com\ibm\icu\text\DecimalFormatSymbols.java" />
+    <Content Include="com\ibm\icu\text\DecompData.java" />
+    <Content Include="com\ibm\icu\text\DictionaryBasedBreakIterator.java" />
+    <Content Include="com\ibm\icu\text\DigitList.java" />
+    <Content Include="com\ibm\icu\text\DurationFormat.java" />
+    <Content Include="com\ibm\icu\text\EscapeTransliterator.java" />
+    <Content Include="com\ibm\icu\text\FilteredNormalizer2.java" />
+    <Content Include="com\ibm\icu\text\FunctionReplacer.java" />
+    <Content Include="com\ibm\icu\text\IDNA.java" />
+    <Compile Include="com\ibm\icu\text\LocaleDisplayNames.cs" />
+    <Content Include="com\ibm\icu\text\LowercaseTransliterator.java" />
+    <Content Include="com\ibm\icu\text\MeasureFormat.java" />
+    <Compile Include="com\ibm\icu\text\MessageFormat.cs" />
+    <Content Include="com\ibm\icu\text\MessagePattern.java" />
+    <Content Include="com\ibm\icu\text\NameUnicodeTransliterator.java" />
+    <Content Include="com\ibm\icu\text\NFRule.java" />
+    <Content Include="com\ibm\icu\text\NFRuleSet.java" />
+    <Content Include="com\ibm\icu\text\NFSubstitution.java" />
+    <Content Include="com\ibm\icu\text\NormalizationTransliterator.java" />
+    <Content Include="com\ibm\icu\text\Normalizer.java" />
+    <Content Include="com\ibm\icu\text\Normalizer2.java" />
+    <Content Include="com\ibm\icu\text\NullTransliterator.java" />
+    <Content Include="com\ibm\icu\text\NumberFormat.java" />
+    <Content Include="com\ibm\icu\text\NumberFormatServiceShim.java" />
+    <Content Include="com\ibm\icu\text\NumberingSystem.java" />
+    <Content Include="com\ibm\icu\text\PluralFormat.java" />
+    <Content Include="com\ibm\icu\text\PluralRules.java" />
+    <Content Include="com\ibm\icu\text\Quantifier.java" />
+    <Compile Include="com\ibm\icu\text\RawCollationKey.cs" />
+    <Content Include="com\ibm\icu\text\RBBIDataWrapper.java" />
+    <Content Include="com\ibm\icu\text\RBBINode.java" />
+    <Content Include="com\ibm\icu\text\RBBIRuleBuilder.java" />
+    <Content Include="com\ibm\icu\text\RBBIRuleParseTable.java" />
+    <Content Include="com\ibm\icu\text\RBBIRuleScanner.java" />
+    <Content Include="com\ibm\icu\text\RBBISetBuilder.java" />
+    <Content Include="com\ibm\icu\text\RBBISymbolTable.java" />
+    <Content Include="com\ibm\icu\text\RBBITableBuilder.java" />
+    <Content Include="com\ibm\icu\text\RBNFChinesePostProcessor.java" />
+    <Content Include="com\ibm\icu\text\RbnfLenientScanner.java" />
+    <Content Include="com\ibm\icu\text\RbnfLenientScannerProvider.java" />
+    <Content Include="com\ibm\icu\text\RBNFPostProcessor.java" />
+    <Content Include="com\ibm\icu\text\RbnfScannerProviderImpl.java" />
+    <Content Include="com\ibm\icu\text\RemoveTransliterator.java" />
+    <Compile Include="com\ibm\icu\text\Replaceable.cs" />
+    <Content Include="com\ibm\icu\text\ReplaceableContextIterator.java" />
+    <Content Include="com\ibm\icu\text\ReplaceableString.java" />
+    <Content Include="com\ibm\icu\text\RuleBasedBreakIterator.java" />
+    <Content Include="com\ibm\icu\text\RuleBasedCollator.java" />
+    <Content Include="com\ibm\icu\text\RuleBasedNumberFormat.java" />
+    <Content Include="com\ibm\icu\text\RuleBasedTransliterator.java" />
+    <Content Include="com\ibm\icu\text\SCSU.java" />
+    <Content Include="com\ibm\icu\text\SearchIterator.java" />
+    <Content Include="com\ibm\icu\text\SelectFormat.java" />
+    <Content Include="com\ibm\icu\text\SimpleDateFormat.java" />
+    <Content Include="com\ibm\icu\text\SourceTargetUtility.java" />
+    <Content Include="com\ibm\icu\text\SpoofChecker.java" />
+    <Content Include="com\ibm\icu\text\StringCharacterIterator.java" />
+    <Content Include="com\ibm\icu\text\StringMatcher.java" />
+    <Content Include="com\ibm\icu\text\StringPrep.java" />
+    <Content Include="com\ibm\icu\text\StringPrepParseException.java" />
+    <Content Include="com\ibm\icu\text\StringReplacer.java" />
+    <Content Include="com\ibm\icu\text\StringSearch.java" />
+    <Content Include="com\ibm\icu\text\StringTransform.java" />
+    <Content Include="com\ibm\icu\text\SymbolTable.java" />
+    <Content Include="com\ibm\icu\text\ThaiBreakIterator.java" />
+    <Content Include="com\ibm\icu\text\TimeUnitFormat.java" />
+    <Content Include="com\ibm\icu\text\TimeZoneFormat.java" />
+    <Content Include="com\ibm\icu\text\TimeZoneNames.java" />
+    <Content Include="com\ibm\icu\text\TitlecaseTransliterator.java" />
+    <Content Include="com\ibm\icu\text\Transform.java" />
+    <Content Include="com\ibm\icu\text\TransformTransliterator.java" />
+    <Content Include="com\ibm\icu\text\TransliterationRule.java" />
+    <Content Include="com\ibm\icu\text\TransliterationRuleSet.java" />
+    <Content Include="com\ibm\icu\text\Transliterator.java" />
+    <Content Include="com\ibm\icu\text\TransliteratorIDParser.java" />
+    <Content Include="com\ibm\icu\text\TransliteratorParser.java" />
+    <Content Include="com\ibm\icu\text\TransliteratorRegistry.java" />
+    <Content Include="com\ibm\icu\text\UCharacterIterator.java" />
+    <Content Include="com\ibm\icu\text\UFormat.java" />
+    <Content Include="com\ibm\icu\text\UForwardCharacterIterator.java" />
+    <Content Include="com\ibm\icu\text\UnescapeTransliterator.java" />
+    <Content Include="com\ibm\icu\text\UnicodeCompressor.java" />
+    <Content Include="com\ibm\icu\text\UnicodeDecompressor.java" />
+    <Compile Include="com\ibm\icu\text\UnicodeFilter.cs" />
+    <Compile Include="com\ibm\icu\text\UnicodeMatcher.cs" />
+    <Content Include="com\ibm\icu\text\UnicodeNameTransliterator.java" />
+    <Content Include="com\ibm\icu\text\UnicodeReplacer.java" />
+    <Compile Include="com\ibm\icu\text\UnicodeSet.cs" />
+    <Content Include="com\ibm\icu\text\UnicodeSetIterator.java" />
+    <Content Include="com\ibm\icu\text\UppercaseTransliterator.java" />
+    <Compile Include="com\ibm\icu\text\UTF16.cs" />
+    <Content Include="com\ibm\icu\util\AnnualTimeZoneRule.java" />
+    <Content Include="com\ibm\icu\util\BasicTimeZone.java" />
+    <Content Include="com\ibm\icu\util\BuddhistCalendar.java" />
+    <Content Include="com\ibm\icu\util\ByteArrayWrapper.java" />
+    <Content Include="com\ibm\icu\util\BytesTrie.java" />
+    <Content Include="com\ibm\icu\util\BytesTrieBuilder.java" />
+    <Content Include="com\ibm\icu\util\Calendar.java" />
+    <Content Include="com\ibm\icu\util\CalendarServiceShim.java" />
+    <Content Include="com\ibm\icu\util\CaseInsensitiveString.java" />
+    <Content Include="com\ibm\icu\util\CECalendar.java" />
+    <Content Include="com\ibm\icu\util\CharsTrie.java" />
+    <Content Include="com\ibm\icu\util\CharsTrieBuilder.java" />
+    <Content Include="com\ibm\icu\util\ChineseCalendar.java" />
+    <Content Include="com\ibm\icu\util\CompactByteArray.java" />
+    <Content Include="com\ibm\icu\util\CompactCharArray.java" />
+    <Content Include="com\ibm\icu\util\CopticCalendar.java" />
+    <Content Include="com\ibm\icu\util\Currency.java" />
+    <Content Include="com\ibm\icu\util\CurrencyAmount.java" />
+    <Content Include="com\ibm\icu\util\CurrencyServiceShim.java" />
+    <Content Include="com\ibm\icu\util\DateInterval.java" />
+    <Content Include="com\ibm\icu\util\DateRule.java" />
+    <Content Include="com\ibm\icu\util\DateTimeRule.java" />
+    <Content Include="com\ibm\icu\util\EasterHoliday.java" />
+    <Content Include="com\ibm\icu\util\EthiopicCalendar.java" />
+    <Compile Include="com\ibm\icu\util\Freezable.cs" />
+    <Content Include="com\ibm\icu\util\GlobalizationPreferences.java" />
+    <Content Include="com\ibm\icu\util\GregorianCalendar.java" />
+    <Content Include="com\ibm\icu\util\HebrewCalendar.java" />
+    <Content Include="com\ibm\icu\util\HebrewHoliday.java" />
+    <Content Include="com\ibm\icu\util\Holiday.java" />
+    <Content Include="com\ibm\icu\util\IllformedLocaleException.java" />
+    <Content Include="com\ibm\icu\util\IndianCalendar.java" />
+    <Content Include="com\ibm\icu\util\InitialTimeZoneRule.java" />
+    <Content Include="com\ibm\icu\util\IslamicCalendar.java" />
+    <Content Include="com\ibm\icu\util\JapaneseCalendar.java" />
+    <Compile Include="com\ibm\icu\util\LocaleData.cs" />
+    <Content Include="com\ibm\icu\util\LocaleMatcher.java" />
+    <Content Include="com\ibm\icu\util\LocalePriorityList.java" />
+    <Content Include="com\ibm\icu\util\Measure.java" />
+    <Content Include="com\ibm\icu\util\MeasureUnit.java" />
+    <Content Include="com\ibm\icu\util\Output.java" />
+    <Content Include="com\ibm\icu\util\OverlayBundle.java" />
+    <Content Include="com\ibm\icu\util\RangeDateRule.java" />
+    <Content Include="com\ibm\icu\util\RangeValueIterator.java" />
+    <Content Include="com\ibm\icu\util\Region.java" />
+    <Content Include="com\ibm\icu\util\RuleBasedTimeZone.java" />
+    <Content Include="com\ibm\icu\util\SimpleDateRule.java" />
+    <Content Include="com\ibm\icu\util\SimpleHoliday.java" />
+    <Content Include="com\ibm\icu\util\SimpleTimeZone.java" />
+    <Content Include="com\ibm\icu\util\StringTokenizer.java" />
+    <Content Include="com\ibm\icu\util\StringTrieBuilder.java" />
+    <Content Include="com\ibm\icu\util\STZInfo.java" />
+    <Content Include="com\ibm\icu\util\TaiwanCalendar.java" />
+    <Content Include="com\ibm\icu\util\TimeArrayTimeZoneRule.java" />
+    <Content Include="com\ibm\icu\util\TimeUnit.java" />
+    <Content Include="com\ibm\icu\util\TimeUnitAmount.java" />
+    <Content Include="com\ibm\icu\util\TimeZone.java" />
+    <Content Include="com\ibm\icu\util\TimeZoneRule.java" />
+    <Content Include="com\ibm\icu\util\TimeZoneTransition.java" />
+    <Compile Include="com\ibm\icu\util\ULocale.cs" />
+    <Content Include="com\ibm\icu\util\UniversalTimeScale.java" />
+    <Compile Include="com\ibm\icu\util\UResourceBundle.cs" />
+    <Content Include="com\ibm\icu\util\UResourceBundleIterator.java" />
+    <Compile Include="com\ibm\icu\util\UResourceTypeMismatchException.cs" />
+    <Content Include="com\ibm\icu\util\ValueIterator.java" />
+    <Compile Include="com\ibm\icu\util\VersionInfo.cs" />
+    <Content Include="com\ibm\icu\util\VTimeZone.java" />
+    <Content Include="license.html" />
+    <Content Include="unicode-license.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

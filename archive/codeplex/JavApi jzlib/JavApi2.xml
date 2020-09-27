@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JavApi jzlib</name>
+    </assembly>
+    <members>
+        <member name="M:com.jcraft.jzlib.ZInputStream.getTotalIn">
+            Returns the total number of bytes input so far.
+        </member>
+        <member name="M:com.jcraft.jzlib.ZInputStream.getTotalOut">
+            Returns the total number of bytes output so far.
+        </member>
+        <member name="M:com.jcraft.jzlib.ZOutputStream.getTotalIn">
+            Returns the total number of bytes input so far.
+        </member>
+        <member name="M:com.jcraft.jzlib.ZOutputStream.getTotalOut">
+            Returns the total number of bytes output so far.
+        </member>
+    </members>
+</doc>
