@@ -1,6 +1,6 @@
 ### BEGIN PROJECT
 private/
-docs/
+docs/internal
 
 ### BEGIN OS
 .DS_Store
