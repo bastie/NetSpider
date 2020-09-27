@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35FBC926-E689-404F-B9CC-F0C1260F3AAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>org.apache.common.pool</RootNamespace>
+    <AssemblyName>JavApi Commons pool %28Apache Port%29</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="org\apache\commons\pool\impl\GenericKeyedObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\PoolUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="org\apache\commons\pool\BaseKeyedObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\BaseKeyedPoolableObjectFactory.cs" />
+    <Compile Include="org\apache\commons\pool\BaseObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\BasePoolableObjectFactory.cs" />
+    <Compile Include="org\apache\commons\pool\impl\CursorableLinkedList.cs" />
+    <Compile Include="org\apache\commons\pool\impl\EvictionTimer.cs" />
+    <Compile Include="org\apache\commons\pool\impl\GenericKeyedObjectPoolFactory.cs" />
+    <Compile Include="org\apache\commons\pool\impl\GenericObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\impl\GenericObjectPoolFactory.cs" />
+    <Compile Include="org\apache\commons\pool\KeyedObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\KeyedObjectPoolFactory.cs" />
+    <Compile Include="org\apache\commons\pool\KeyedPoolableObjectFactory.cs" />
+    <Compile Include="org\apache\commons\pool\ObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\ObjectPoolFactory.cs" />
+    <Compile Include="org\apache\commons\pool\PoolableObjectFactory.cs" />
+    <Compile Include="org\apache\commons\pool\impl\SoftReferenceObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\impl\StackKeyedObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\impl\StackKeyedObjectPoolFactory.cs" />
+    <Compile Include="org\apache\commons\pool\impl\StackObjectPool.cs" />
+    <Compile Include="org\apache\commons\pool\impl\StackObjectPoolFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavApi\JavApi.csproj">
+      <Project>{C9FA08E8-9DE4-40C8-A537-8AB7798F3E96}</Project>
+      <Name>JavApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

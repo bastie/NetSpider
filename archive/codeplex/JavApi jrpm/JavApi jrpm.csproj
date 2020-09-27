@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{922D2CD4-02E3-4312-BE94-CE26858C0FB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JavApi_jrpm</RootNamespace>
+    <AssemblyName>JavApi jrpm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="com\jguild\jrpm\io\constant\EnumDelegate.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\EnumIf.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\FlagIf.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\LeadArchitecture.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\LeadOS.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\LeadSignature.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\LeadType.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\RPMFileAttr.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\RPMHeaderTag.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\RPMIndexType.cs" />
+    <Compile Include="com\jguild\jrpm\io\constant\RPMSense.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\BIN.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\CHAR.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\DataTypeIf.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\I18NSTRING.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\INT16.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\INT32.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\INT64.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\INT8.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\NULL.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\RPMUtil.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\STRING.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\STRING_ARRAY.cs" />
+    <Compile Include="com\jguild\jrpm\io\datatype\TypeFactory.cs" />
+    <Compile Include="com\jguild\jrpm\io\Header.cs" />
+    <Compile Include="com\jguild\jrpm\io\IndexEntry.cs" />
+    <Compile Include="com\jguild\jrpm\io\RPMFile.cs" />
+    <Compile Include="com\jguild\jrpm\io\RPMHeader.cs" />
+    <Compile Include="com\jguild\jrpm\io\RPMLead.cs" />
+    <Compile Include="com\jguild\jrpm\io\RPMSignature.cs" />
+    <Compile Include="com\jguild\jrpm\io\Store.cs" />
+    <Compile Include="com\jguild\jrpm\tools\Info.cs" />
+    <None Include="com\jguild\jrpm\tools\RPMTask.cs" />
+    <None Include="com\jguild\jrpm\ui\RPMBrowser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="com\jguild\jrpm\io\archive\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JavApi Commons Compress %28Apache Port%29\JavApi Commons Compress %28Apache Port%29.csproj">
+      <Project>{780F1533-D766-436A-B10B-E8CF50E39B5D}</Project>
+      <Name>JavApi Commons Compress %28Apache Port%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi SevenZip\JavApi SevenZip.csproj">
+      <Project>{A75E4375-234F-4F9B-9A30-EFF779FA4DFF}</Project>
+      <Name>JavApi SevenZip</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JavApi\JavApi.csproj">
+      <Project>{C9FA08E8-9DE4-40C8-A537-8AB7798F3E96}</Project>
+      <Name>JavApi</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

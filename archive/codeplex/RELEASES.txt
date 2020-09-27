@@ -1,0 +1,32 @@
+         __                    __               __
+        / /                   /  \             /_/
+       / /  ________    __   / /\ \  ______   __
+      / /  / __  /\ \  / /  / /__\ \/ __  /  / /
+ ____/ /__/ /_/ /__\ \/ /__/  ____ / /_/ /__/ /
+/_________________________________  _________/
+                                 / /
+                                /_/
+
+
+Release ideas
+==========================================================
+
+Version 0.1.x.y:
+- Some Tests and implementations
+
+Version 0.2.x.y:
+- java.lang implementation > 80%
+- java.io implementation > 50%
+- Test on Mono
+
+Version 0.3.x.y:
+- java.util implementation > 50%
+
+Version 0.4.x.y:
+- java.net implementation > 50%
+
+Version 0.6.x.y:
+- Sax
+
+Version 1.0.0.0:
+- all java SE classes _or_ convert a not to simple third party API with JavApi
