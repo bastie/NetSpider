@@ -1,6 +1,30 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+      <Version>0.9.1</Version>
+      <PackageId>VampireApi</PackageId>
+      <Title>.net Vampire API</Title>
+      <Authors>Sebastian Ritter</Authors>
+      <Description>
+        This library enables working with .net as Java like programming code.
+      </Description>  
+      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+
+
+      <PackageIcon></PackageIcon>
+            
+      <PackageTags>Java;API;port;developer</PackageTags>
+      <PackageReleaseNotes>Release 0.9.1</PackageReleaseNotes>
+      <IncludeSource>true</IncludeSource>
+
+      <RepositoryUrl>https://github.com/bastie/NetSpider.git</RepositoryUrl>
+      <PackageSummary>Java API for .net</PackageSummary>
+      <copyright>Copyright 2011-2020 Sebastian Ritter</copyright>
+    </PropertyGroup>
+  
+  
+  
+  <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     
     <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
