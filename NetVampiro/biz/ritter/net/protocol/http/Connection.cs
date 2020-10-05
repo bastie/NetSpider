@@ -46,7 +46,7 @@ namespace biz.ritter.net.protocol.http
         {
             this.url = url;
             this.requestProperties = new java.util.Properties();
-            this.addRequestProperty("User-Agent", "JavApi/"+java.lang.SystemJ.getProperty("java.version"));
+            this.addRequestProperty("User-Agent", "Vampire/"+java.lang.SystemJ.getProperty("java.version"));
             this.addRequestProperty("Referer", "http://www.Ritter.biz");
         }
 
