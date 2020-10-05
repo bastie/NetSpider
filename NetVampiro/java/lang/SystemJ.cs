@@ -141,8 +141,11 @@ namespace biz.ritter.javapi.lang
                 prop.Add("user.variant", null); // content???
                 // Java specific environment
                 prop.Add("java.vendor","Sebastian Ritter");
+                prop.Add("java.vendor.url","https://bastie.github.io/PythonVampire/");
                 prop.Add("java.version",System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString());
                 prop.Add("java.class.path", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
+                prop.Add("java.runtime.version","17"); // TODO: implement Java 17 module base!
+                prop.Add("java.runtime.name", "Vampire Runtime Environment");
                 // Java net environment
                 prop.Add("java.protocol.handler.pkgs", "biz.ritter.net.protocol|");
                 // GUI specific environment 
@@ -165,6 +168,20 @@ namespace biz.ritter.javapi.lang
                 prop.Add("org.apache.xml.namespace.QName.useCompatibleSerialVersionUID", null);
                 // ICU properties
                 prop.Add("ICUDebug", null);
+                // com.sun properties
+                prop.Add("com.sun.management.jmxremote.port", null);
+                prop.Add("com.sun.management.jmxremote.rmi.port", null);
+                prop.Add("com.sun.management.jmxremote.local.port", null);
+                // Java 15
+                prop.Add("jdk.tls.client.SignatureSchemes", null); 
+                prop.Add("jdk.tls.server.SignatureSchemes", null); 
+                prop.Add("jdk.tls.client.enableCAExtension", "false");
+                prop.Add("jdk.sunec.disableNative", "true");
+                // Networking: https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/net/doc-files/net-properties.html
+                prop.Add("java.net.preferIPv4Stack", "false");
+                prop.Add("java.net.preferIPv6Addresses", "false");
+                prop.Add("jdk.net.hosts.file", null); // see https://www.oracle.com/java/technologies/javase/15-relnote-issues.html
+                
                 // own important environment
 
                 // Here it is...

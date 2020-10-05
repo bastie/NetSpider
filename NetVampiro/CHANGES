@@ -1,4 +1,9 @@
-* JavApi 0.? (Target: MonoBuild, packages: java.lang)
+* VampireApi 0.10.0
+  - some litte Java 15 extensions from release notes
+  - litte more refactoring
+* VampireApi 0.9.1
+  - renamed
+  - build on .net core platform with nuget using 
   - javax.xml.crypto package
   - java.lang package extended
   + java.io.PrintStream

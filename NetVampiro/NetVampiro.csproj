@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-      <Version>0.9.1</Version>
+      <Version>0.10.0</Version>
       <PackageId>VampireApi</PackageId>
       <Title>.net Vampire API</Title>
       <Authors>Sebastian Ritter</Authors>
@@ -14,7 +14,7 @@
       <PackageIcon></PackageIcon>
             
       <PackageTags>Java;API;port;developer</PackageTags>
-      <PackageReleaseNotes>Release 0.9.1</PackageReleaseNotes>
+      <PackageReleaseNotes>add a little bit of Java 15 features</PackageReleaseNotes>
       <IncludeSource>true</IncludeSource>
 
       <RepositoryUrl>https://github.com/bastie/NetSpider.git</RepositoryUrl>
