@@ -19,9 +19,9 @@ namespace biz.ritter.javapi.lang
 {
     public class IllegalCallerException : RuntimeException
     {
-        public IllegalArgumentException () : base (){}
-        public IllegalArgumentException(String message) : base (message){}
-        public IllegalArgumentException(String message, Throwable cause) : base(message, cause) { }
-        public IllegalArgumentException(Throwable cause) : base (cause){}
+        public IllegalCallerException () : base (){}
+        public IllegalCallerException(String message) : base (message){}
+        public IllegalCallerException(String message, Throwable cause) : base(message, cause) { }
+        public IllegalCallerException(Throwable cause) : base (cause){}
     }
 }
