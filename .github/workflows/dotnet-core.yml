@@ -17,11 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
-    - name: Chdir
-            pwd &&
-            cd NetVampiro
     - name: Install dependencies
       run:  pwd &&
+            cd NetVampiro &&
             dotnet restore
     - name: Build
       run:  pwd &&
