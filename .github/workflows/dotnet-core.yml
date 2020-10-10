@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 3.1.301
     - name: Install dependencies
       run:  pwd &&
-            ls -lish
+            ls -lisah &&
             dotnet restore
     - name: Build
       run:  pwd
