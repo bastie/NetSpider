@@ -23,7 +23,7 @@ jobs:
             dotnet restore
     - name: Build
       run:  pwd &&
-            dotnet build NetVampiro --verbosity normal --configuration Release --no-restore
+            dotnet build NetVampiro --verbosity minimal --configuration Release --no-restore
     - name: Test
       run: pwd &&
-           dotnet test --no-restore --verbosity normal
+           dotnet test NetVampiro --no-restore --verbosity normal
