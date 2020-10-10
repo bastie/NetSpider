@@ -18,7 +18,9 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore
+      run:  pwd
+            ls -lish
+            dotnet restore
     - name: Build
       run:  pwd
             cd NetVampiro
