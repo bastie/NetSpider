@@ -139,7 +139,7 @@ namespace Kajabity.Tools.Java
         /// <param name="hashtable">A reference to a hashtable where the key-value pairs can be stored.</param>
         public JavaPropertyReader(java.util.Properties properties)
         {
-            this.hashtable = hashtable;
+            this.hashtable = properties;
         }
 
         /// <summary>

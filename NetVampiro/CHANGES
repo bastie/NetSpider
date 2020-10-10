@@ -1,6 +1,9 @@
 * VampireApi 0.10.0
   - some litte Java 15 extensions from release notes
   - litte more refactoring
+  - outsource 3rd party types
+  + BugFixes:
+  - java.util.Properties.load() 
 * VampireApi 0.9.1
   - renamed
   - build on .net core platform with nuget using 

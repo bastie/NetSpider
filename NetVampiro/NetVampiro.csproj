@@ -35,8 +35,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- time? -->
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="4.7.0" />
+    <!-- for awt -->
     <PackageReference Include="System.Windows.Forms" Version="4.0.0.0" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Kajabity.Tools.Java" Version="0.3.7495.37746" />
+  </ItemGroup>
+  
 
 </Project>

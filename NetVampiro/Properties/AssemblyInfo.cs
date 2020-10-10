@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sebastian Ritter")]
 [assembly: AssemblyProduct("JavApi")]
-[assembly: AssemblyCopyright("Copyright © Sebastian Ritter 2011,2012,2013,2020")]
+[assembly: AssemblyCopyright("Copyright © Sebastian Ritter 2011,2012,2013,2014,2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyLicense("Apache License 2.0")]
@@ -34,8 +34,8 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.9.1")]
+[assembly: AssemblyVersion("0.10.0")]
 // Sichtbar unter Produktversion
-[assembly: AssemblyInformationalVersion("0.9.1.0")]
+[assembly: AssemblyInformationalVersion("0.10.0.0")]
 // Sichtbar unter Dateiversion
 [assembly: AssemblyFileVersion("1.0.0.0")]
