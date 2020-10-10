@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run:  pwd
             cd NetVampiro
-            dotnet build --configuration Release --no-restore
+            dotnet build NetVampiro --verbosity detailed --configuration Release --no-restore
     - name: Test
       run: pwd
            cd NetVampiro
