@@ -1,6 +1,7 @@
 CHECK:
  - java.lang.PrintStream vs. java.io.PrintStream (why lang package?)
  - java.lang.Properties agains JavaDoc with none String get/set Property-Key
+ - java.lang.Properties load Unicode files
  
 To Implement:
  - java.nio.channel (java.io.FileOutputStream.getChannel())

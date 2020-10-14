@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("JavApi")]
+[assembly: AssemblyTitle("VampireApi")]
 [assembly: AssemblyDescription("Java API like programming application interface for .net")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sebastian Ritter")]
-[assembly: AssemblyProduct("JavApi")]
+[assembly: AssemblyProduct("VampireApi")]
 [assembly: AssemblyCopyright("Copyright © Sebastian Ritter 2011,2012,2013,2014,2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

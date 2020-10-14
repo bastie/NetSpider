@@ -8,14 +8,14 @@ docs/internal
 ### BEGIN C#
 #use `./scripts/<os>/create` script
 
-## Solution file
-NetSpider.sln
-
 ## Vampiro project files
 
 # Compiled class file
 NetVampiro/bin
 NetVampiro/obj
+
+NetBloodTest/bin
+NetBloodTest/obj
 
 ### EOF
 
