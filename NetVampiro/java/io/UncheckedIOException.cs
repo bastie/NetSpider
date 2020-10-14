@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at 
@@ -11,13 +11,17 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *  Copyright © 2011, 2020 Sebastian Ritter
+ *  Copyright © 2020 Sebastian Ritter
  */
+using System;
+
+using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
 {
-    public interface Flushable
+    public class UncheckedIOException : java.lang.RuntimeException
     {
-        void flush(); // throws IOException
+        public UncheckedIOException (String message, java.lang.Throwable cause) : base (message, cause) {}
+        public UncheckedIOException (java.lang.Throwable cause) : base (cause){}
     }
 }

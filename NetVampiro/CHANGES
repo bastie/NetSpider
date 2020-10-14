@@ -2,8 +2,9 @@
   - some litte Java 15 extensions from release notes
   - litte more refactoring
   - outsource 3rd party types
+  - java.io.UncheckedIOException
   + BugFixes:
-  - java.util.Properties.load() 
+    - java.util.Properties.load() 
 * VampireApi 0.9.1
   - renamed
   - build on .net core platform with nuget using 

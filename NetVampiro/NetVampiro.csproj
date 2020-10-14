@@ -41,9 +41,5 @@
     <PackageReference Include="System.Windows.Forms" Version="4.0.0.0" />
   </ItemGroup>
   
-  <ItemGroup>
-    <PackageReference Include="Kajabity.Tools.Java" Version="0.3.7495.37746" />
-  </ItemGroup>
-  
 
 </Project>

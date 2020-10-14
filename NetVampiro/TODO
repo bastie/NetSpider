@@ -7,6 +7,20 @@ To Implement:
  - java.nio.channel (java.io.FileOutputStream.getChannel())
  - java.text.MessageFormat
  - FileLock (see http://social.msdn.microsoft.com/Forums/en-US/csharpgeneral/thread/a5300fc5-126c-4e33-8ae6-13376031e9fe/)
+ + Java 8
+   + source missing
+ + Java 9
+   + source missing
+     - java.io.ObjectInputFilter with nested types
+     - java.io.Console
+     - java.io.FilterWriter
+     - java.io.ObjectInputStream.GetField
+     - java.io.ObjectOutputStream.PutField
+     - java.io.ObjectStreamClass
+     - java.io.ObjectStreamField
+   + content missing
+     - java.io.ObjectStreamConstants
+     - FileDescriptor
  - Serialism in Java format (see ... and ...)
 
 Some tools are needed:

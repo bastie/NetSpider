@@ -11,12 +11,9 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *  Copyright © 2011 Sebastian Ritter
+ *  Copyright © 2011,2020 Sebastian Ritter
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using java = biz.ritter.javapi;
 
