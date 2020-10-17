@@ -98,15 +98,58 @@ To Implement:
      - java.lang.reflect.UndeclaredThrowableException
      - java.lang.reflect.GenericSignatureFormatException
      - java.lang.runtime.*
+     - java.net.ContentHandlerfactory
+     - java.net.CookiePolicy
+     - java.net.CookieStore
+     - java.net.DatagramSocketImplFactory
+     - java.net.FileNameMap
+     - java.net.ProtocolFamily
+     - java.net.SocketImplFactory
+     - java.net.SocketOption
+     - java.net.Authenticator
+     - java.net.CacheRequest
+     - java.net.CacheResponse
+     - java.net.ContentHandler
+     - java.net.CookieHandler
+     - java.net.DatagramPaket
+     - java.net.DatagramSocket
+     - java.net.DatagramSocketImpl
+     - java.net.HttpCookie
+     - java.net.HttpURLConnection
+     - java.net.IDN
+     - java.net.Inet4Address
+     - java.net.Inet6Address
+     - java.net.InetAddress
+     - java.net.InetSocketAddress
+     - java.net.SocketImpl
+     - java.net.SocketPermission
+     - java.net.StandardSocketOptions
+     - java.net.URLClassLoader
+     - java.net.URLDecoder
+     - java.net.URLEncoder
+     - java.net.URLPermission
+     - java.net.Authenitcator.RequestorType
+     - java.net.Proxy.Type
+     - java.net.StandardProtocolFamily
+     - java.net.ConnectException
+     - java.net.HttpRetryException
+     - java.net.NoRouteToHostException
+     - java.net.PortUnreachableException
+     - java.net.ProtocolException
+     - java.net.SocketTimeoutException
+     - java.net.UnknownServiceException
+     - java.net.spi.*
    + content missing
      - java.io.ObjectStreamConstants
-     - FileDescriptor
+     - java.io.FileDescriptor
      - java.lang.CharSequence
      - java.lang.Iterable
      - java.lang.Runtime
      - java.lang.System
  - Serialism in Java format (see ... and ...)
  - rename sources in java.lang.ref without package name
+ 
+ 
  
 Some tools are needed:
 
