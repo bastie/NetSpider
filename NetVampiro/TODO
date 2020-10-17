@@ -2,14 +2,27 @@ CHECK:
  - java.lang.PrintStream vs. java.io.PrintStream (why lang package?)
  - java.lang.Properties agains JavaDoc with none String get/set Property-Key
  - java.lang.Properties load Unicode files
+ - java.lang.Cloneable - implements clone() Method; need we this to be compliant?
+ - What todo with annotations?
+   - java.lang.Deprecated
+   - java.lang.FunctionalInterface
+   - java.lang.Override
+   - java.lang.SafeVarargs
+   - java.lang.SuppressWarning
+   - java.lang.annotation.Documented
+   - java.lang.annotation.Inherited
+   - java.lang.annotation.Native
+   - java.lang.annotation.Repeatable
+   - java.lang.annotation.Retention
+   - java.lang.annotation.Target
+ - rename internal class with prefixes? see java.math. ...
+ - why is java.math.Primatily not as internal declared?
  
 To Implement:
  - java.nio.channel (java.io.FileOutputStream.getChannel())
  - java.text.MessageFormat
  - FileLock (see http://social.msdn.microsoft.com/Forums/en-US/csharpgeneral/thread/a5300fc5-126c-4e33-8ae6-13376031e9fe/)
- + Java 8
-   + source missing
- + Java 9
+ + Java , this and more
    + source missing
      - java.io.ObjectInputFilter with nested types
      - java.io.Console
@@ -18,12 +31,87 @@ To Implement:
      - java.io.ObjectOutputStream.PutField
      - java.io.ObjectStreamClass
      - java.io.ObjectStreamField
+     - java.lang.ProcessHandle
+     - java.lang.ProcessHandle.Info
+     - java.lang.StackWalker.StackFrame
+     - java.lang.System.Logger
+     - java.lang.Thread.UncaughtExceptionHandler
+     - java.lang.Character.Subset
+     - java.lang.Character.UnicodeBlock
+     - java.lang.Compiler
+     - java.lang.Enum
+     - java.lang.InheritableThreadLocal
+     - java.lang.Module
+     - java.lang.ModuleLayer
+     - java.lang.Object --> check with our extension methods
+     - java.lang.ProcessBuilder.Redirect
+     - java.lang.Record
+     - java.lang.Runtime.Version
+     - java.lang.StackWalker
+     - java.lang.System.LoggerFinder
+     - java.lang.ThreadGroup
+     - java.lang.Character.UnicodeScript
+     - java.lang.ProcessBuilder.Redirect.Type
+     - java.lang.StackWalker.Option
+     - java.lang.System.Logger.Level
+     - java.lang.Thread.State
+     - java.lang.EnumConstantNotPresentException
+     - java.lang.LayerInstantiationException
+     - java.lang.ReflextiveOperationException
+     - java.lang.BootStrapMethodError
+     - java.lang.ExceptionInInitializerError
+     - java.lang.IllegalAccessError
+     - java.lang.annotation.ElementType
+     - java.lang.annotation.RetentionPolicy
+     - java.lang.annotation.AnnotationTypeMismatchException
+     - java.lang.annotation.IncompleteAnnotationException
+     - java.lang.annotation.AnnotationFormatException
+     - java.lang.constant.*
+     - java.lang.invoke.*
+     - java.lang.module.*
+     - java.lang.ref.Cleaner.Cleanable
+     - java.lang.ref.Cleaner
+     - java.lang.ref.PhantomReference
+     - java.lang.reflect.AnnotatedArrayType
+     - java.lang.reflect.AnnotatedElement
+     - java.lang.reflect.AnnotatedParameterizedType
+     - java.lang.reflect.AnnotedType
+     - java.lang.reflect.AnnotedTypeVariable
+     - java.lang.reflect.AnnotedTypeWildcard
+     - java.lang.reflect.GenericArrayType
+     - java.lang.reflect.GenericDeclaration
+     - java.lang.reflect.InvocationHandler
+     - java.lang.reflect.Member
+     - java.lang.reflect.ParamterizedType
+     - java.lang.reflect.Type
+     - java.lang.reflect.TypeVariable
+     - java.lang.reflect.WildcardType
+     - java.lang.reflect.Executable
+     - java.lang.reflect.Field
+     - java.lang.reflect.Parameter
+     - java.lang.reflect.Proxy
+     - java.lang.reflect.RecordComponent
+     - java.lang.reflect.ReflectPermission
+     - java.lang.reflect.InaccessibleObjectException
+     - java.lang.reflect.MalformedParameterizedTypeException
+     - java.lang.reflect.MalformedParametersExeption
+     - java.lang.reflect.UndeclaredThrowableException
+     - java.lang.reflect.GenericSignatureFormatException
+     - java.lang.runtime.*
    + content missing
      - java.io.ObjectStreamConstants
      - FileDescriptor
+     - java.lang.CharSequence
+     - java.lang.Iterable
+     - java.lang.Runtime
+     - java.lang.System
  - Serialism in Java format (see ... and ...)
-
+ - rename sources in java.lang.ref without package name
+ 
 Some tools are needed:
+
+In beginning:
+ - TestCases
 
 Not implemented:
  - PoRE (see later)
@@ -35,3 +123,6 @@ Not implemented:
         into "catch (System.Threading.ThreadInterruptedException e){"
     (B) Serialize check. Because Java implements serialize over interface for all
         subclasses but C# used annotations to be declared at single types.
+    (C) All types are declare, with hierarchie
+    (D) All methods and fields are declare
+    (E) TestCases
