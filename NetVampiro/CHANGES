@@ -1,8 +1,10 @@
 * VampireApi 0.10.0
   - some litte Java 15 extensions from release notes
   - litte more refactoring
-  - outsource 3rd party types
   - java.io.UncheckedIOException
+  - java.net.spi.*
+  - java.lang.SystemJ.setProperty
+  - java.lang.SecurityManager.checkPropertiesAccess
   + BugFixes:
     - java.util.Properties.load() 
 * VampireApi 0.9.1

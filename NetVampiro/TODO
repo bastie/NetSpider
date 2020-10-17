@@ -138,7 +138,6 @@ To Implement:
      - java.net.ProtocolException
      - java.net.SocketTimeoutException
      - java.net.UnknownServiceException
-     - java.net.spi.*
    + content missing
      - java.io.ObjectStreamConstants
      - java.io.FileDescriptor
@@ -148,6 +147,7 @@ To Implement:
      - java.lang.System
  - Serialism in Java format (see ... and ...)
  - rename sources in java.lang.ref without package name
+ - outsource 3rd party types
  
  
  

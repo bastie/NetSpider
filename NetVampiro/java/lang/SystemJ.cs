@@ -11,7 +11,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *  Copyright © 2011-2013 Sebastian Ritter
+ *  Copyright © 2011-2020 Sebastian Ritter
  */
 using System;
 using System.Collections;
@@ -36,10 +36,20 @@ namespace biz.ritter.javapi.lang
         }
 
         private static SecurityManager securityManagerInstance;
+        public static void setSecurityManager (SecurityManager newSecurityManager) {
+            if (null != securityManagerInstance) {
+              securityManagerInstance.checkPermission(RuntimePermission.permissionToSetSecurityManager);
+            }
+            if ("disallow".equals(SystemJ.getProperty("java.security.manager"))) {
+              throw new java.lang.UnsupportedOperationException ("Runtime property java.security.manager=disallow");
+            }
+            if (null != newSecurityManager) {
+              securityManagerInstance = newSecurityManager;
+            }
+        }
         public static SecurityManager getSecurityManager()
         {
-            if (null == securityManagerInstance) securityManagerInstance = new SecurityManager();
-            return securityManagerInstance;
+            return securityManagerInstance; // can be null
         }
 
         public static int identityHashCode (Object o) {
@@ -160,6 +170,8 @@ namespace biz.ritter.javapi.lang
 				prop.Add("java.io.tmpdir", System.IO.Path.GetTempPath()); //using in logging FileHandler
                 //Security properties - see java.security package
                 prop.Add("java.security.properties", null);
+                prop.Add("java.security.manager", "allow"); // see java.lang.SecurityManager
+                prop.Add("java.security.policy", null); // path to policy file
                 // Preferences properties
                 prop.Add("java.util.prefs.PreferencesFactory", null);
                 // JDBC properties
@@ -193,6 +205,14 @@ namespace biz.ritter.javapi.lang
         public static String getProperty(String key)
         {
             return getProperties().getProperty(key);
+        }
+        
+        public static void setProperty (String key, String value) {
+          if (null == systemProperties) getProperties();
+          if (null != getSecurityManager()) {
+            getSecurityManager().checkPropertiesAccess(); // 
+          }
+          systemProperties[key]= value;
         }
 
         public static String getProperty(String key, String defaultValue)

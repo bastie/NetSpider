@@ -10,6 +10,8 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ *
+ *  Copyright © 2011-2020 Sebastian Ritter
  */
 using System;
 using java = biz.ritter.javapi;
@@ -54,6 +56,10 @@ namespace biz.ritter.javapi.lang
             {
                 inCheck = false;
             }
+        }
+        
+        public void checkPropertiesAccess () {
+          this.checkPermission(new java.util.PropertyPermission("*","read,write"));
         }
 
     }

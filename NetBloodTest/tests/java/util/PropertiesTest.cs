@@ -16,7 +16,6 @@ namespace vampire.test.util
         [Test]
         public void Test_LoadProperties()
         {
-            java.lang.SystemJ.outJ.println("huhu");
             java.util.Properties p = java.lang.SystemJ.getProperties();
             p.list(java.lang.SystemJ.outJ);
             p.load(new java.io.FileInputStream (new java.io.File(this.rootDir+"tests/data/java.util.Properties.properties")));
