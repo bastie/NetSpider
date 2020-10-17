@@ -131,13 +131,6 @@ To Implement:
      - java.net.Authenitcator.RequestorType
      - java.net.Proxy.Type
      - java.net.StandardProtocolFamily
-     - java.net.ConnectException
-     - java.net.HttpRetryException
-     - java.net.NoRouteToHostException
-     - java.net.PortUnreachableException
-     - java.net.ProtocolException
-     - java.net.SocketTimeoutException
-     - java.net.UnknownServiceException
    + content missing
      - java.io.ObjectStreamConstants
      - java.io.FileDescriptor

@@ -3,6 +3,13 @@
   - litte more refactoring
   - java.io.UncheckedIOException
   - java.net.spi.*
+  - java.net.UnknownServiceException
+  - java.net.SocketTimeoutException
+  - java.net.ProtocolException
+  - java.net.PortUnreachableException
+  - java.net.NoRouteToHostException
+  - java.net.HttpRetryException
+  - java.net.ConnectException
   - java.lang.SystemJ.setProperty
   - java.lang.SecurityManager.checkPropertiesAccess
   + BugFixes:
