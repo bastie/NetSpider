@@ -11,9 +11,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *  Copyright © 2011 Sebastian Ritter
+ *  Copyright © 2011-2020 Sebastian Ritter
  */
 using System;
+using System.Text;
+using System.IO;
 using java = biz.ritter.javapi;
 
 namespace biz.ritter.io
@@ -97,4 +99,55 @@ namespace biz.ritter.io
             this.output.write(buffer, offset, count);
         }
     }
+
+
+
+    public class Reader2Stream {
+	    public static Stream convert (java.io.Reader reader) {
+	
+            java.io.BufferedReader br = new java.io.BufferedReader(reader);
+
+            String input = "";
+			String line = br.readLine();
+			while(line != null) {
+			    input += java.lang.SystemJ.getProperty("line.separator")
+                      + line;
+			    line = br.readLine();
+			}
+            MemoryStream memoryStream = new MemoryStream( Encoding.ASCII.GetBytes(input) );
+            return memoryStream;
+	    }
+	}
+	
+	internal sealed class WriterOutputStream : java.io.OutputStream {
+	    private readonly java.io.Writer baseWriter;
+	    
+	    public WriterOutputStream(java.io.Writer writer){
+          this.baseWriter = writer;
+	    }
+	    
+	    public void close()	{
+	        this.baseWriter.close();
+	    }
+	    
+	    public void flush(){
+	        this.baseWriter.flush();
+	    }
+	    
+	    public void write(byte[] b) { 
+	        this.baseWriter.write(new java.lang.StringJ(b));
+	    }
+	    
+	    public void write(byte[] b, int off, int len){
+	        this.baseWriter.write(new java.lang.StringJ(b,off,len));
+	    }
+	    
+	    public override void write(int b) {
+	        write(new byte[(byte)b]);
+	    }
+	}
+
 }
+
+
+

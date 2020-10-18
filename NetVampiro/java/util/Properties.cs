@@ -11,11 +11,13 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *  Copyright © 2011 Sebastian Ritter
+ *  Copyright © 2011-2020 Sebastian Ritter
  */
 using System;
 using System.Collections.Generic;
 using System.Collections;
+using Kajabity.Tools.Java;
+using biz.ritter.io;
 
 using java = biz.ritter.javapi;
 
@@ -40,8 +42,18 @@ namespace biz.ritter.javapi.util
 
         public void load(java.io.Reader toLoad)
         {
+
+            Kajabity.Tools.Java.JavaPropertyReader reader = new Kajabity.Tools.Java.JavaPropertyReader(this);
+            reader.Parse(biz.ritter.io.Reader2Stream.convert(toLoad));
+//              new biz.ritter.io.StreamWrapper (
+//                biz.ritter.io.Reader2Stream.convert (toLoad), null // better replace by converted Apache commons IO
+//              ) 
+//            );
+
+            /* old but only with changes usable
             Kajabity.Tools.Java.JavaPropertyReader reader = new Kajabity.Tools.Java.JavaPropertyReader(this);
             reader.Parse(toLoad);
+*/
         }
 
         public void store(java.io.OutputStream toWrite, String comments)
@@ -50,8 +62,18 @@ namespace biz.ritter.javapi.util
         }
         public void store(java.io.Writer toWrite, String comments)
         {
+            Kajabity.Tools.Java.JavaPropertyWriter reader = new Kajabity.Tools.Java.JavaPropertyWriter(this);
+            reader.Write(
+              new biz.ritter.io.StreamWrapper (
+                null,
+                new WriterOutputStream(toWrite) // better replace by converted Apache commons IO
+              ),
+              comments
+            );
+            /* old but only with changes usable
             Kajabity.Tools.Java.JavaPropertyWriter writer = new Kajabity.Tools.Java.JavaPropertyWriter(this);
             writer.Write(toWrite, comments);
+*/
         }
 
         /// <summary>

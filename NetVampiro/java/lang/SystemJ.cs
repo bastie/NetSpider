@@ -22,6 +22,18 @@ namespace biz.ritter.javapi.lang
 {
     public sealed class SystemJ
     {
+    
+      public interface Logger {
+        public class Level {
+        }
+        
+        String getName();
+        int getSeverity();
+        
+        static java.lang.SystemJ.Logger.Level valueOf (String name) {
+        return null;
+        }
+      }
 
         private static java.util.Properties systemProperties;
         static SystemJ()
@@ -315,5 +327,9 @@ namespace biz.ritter.javapi.lang
         {
             Runtime.getRuntime().exit(rc);
         }
+        
+        
+        
     }
 }
+
