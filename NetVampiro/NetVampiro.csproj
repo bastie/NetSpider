@@ -35,6 +35,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Java properties IO tools -->
+    <PackageReference Include="Kajabity.Tools.Java" Version="0.3.7592.36961" />
     <!-- time? -->
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="4.7.0" />
     <!-- for awt -->
