@@ -140,14 +140,13 @@ To Implement:
      - java.lang.System
  - Serialism in Java format (see ... and ...)
  - rename sources in java.lang.ref without package name
- - outsource 3rd party types
  
  
  
 Some tools are needed:
 
 In beginning:
- - TestCases
+ - TestCases - I need much more
 
 Not implemented:
  - PoRE (see later)

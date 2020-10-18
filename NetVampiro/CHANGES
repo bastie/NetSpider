@@ -1,4 +1,7 @@
+* VampireApi 0.11.0
+
 * VampireApi 0.10.0
+  - outsource 3rd party types
   - some litte Java 15 extensions from release notes
   - litte more refactoring
   - java.io.UncheckedIOException
