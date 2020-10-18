@@ -23,17 +23,18 @@ namespace biz.ritter.javapi.lang
     public sealed class SystemJ
     {
     
-      public interface Logger {
-        public class Level {
+        public interface Logger {
+      
+          public enum Level {
+            OFF = java.lang.Integer.MAX_VALUE, //java.util.logging.Level.OFF.maxValue()
+            ERROR = 1000,
+            WARNING = 900,
+            INFO = 800,
+            DEBUG = 500,
+            TRACE = 400,
+            ALL = java.lang.Integer.MIN_VALUE
+          }
         }
-        
-        String getName();
-        int getSeverity();
-        
-        static java.lang.SystemJ.Logger.Level valueOf (String name) {
-        return null;
-        }
-      }
 
         private static java.util.Properties systemProperties;
         static SystemJ()

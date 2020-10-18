@@ -236,7 +236,7 @@ public class Level : java.io.Serializable {
      * 
      * @return this level's integer value.
      */
-    public  int intValue() {
+    public int intValue() {
         return this.value;
     }
 
