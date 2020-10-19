@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at 
@@ -13,18 +13,25 @@
  *  
  *  Copyright © 2020 Sebastian Ritter
  */
-
 using System;
 using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.net
 {
-    [Serializable]
-    public class InetAddress : java.io.Serializable
+    public abstract class ContentHandler 
     {
-        public static InetAddress getByName(String host)
-        {
-            throw new java.lang.UnsupportedOperationException("Not yet implemented");
+        public abstract Object getContent(URLConnection con);
+
+        public Object getContent (URLConnection con, java.lang.Class [] neededTypeOfContent) {
+          Object o = this.getContent(con);
+          foreach (java.lang.Class cls in neededTypeOfContent) {
+            
+            if (Type.GetTypeFromHandle(Type.GetTypeHandle(cls)).Equals (
+                Type.GetTypeFromHandle(Type.GetTypeHandle(o)))) {
+              return o;
+            }
+          }
+          return null;
         }
     }
 }

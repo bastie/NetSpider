@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at 
@@ -13,18 +13,29 @@
  *  
  *  Copyright © 2020 Sebastian Ritter
  */
-
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.net
+namespace biz.ritter.javapi.lang.reflect
 {
+
     [Serializable]
-    public class InetAddress : java.io.Serializable
+    public class UndeclaredThrowableException : java.lang.RuntimeException
     {
-        public static InetAddress getByName(String host)
-        {
-            throw new java.lang.UnsupportedOperationException("Not yet implemented");
+
+        private static readonly long serialVersionUID = 0L;
+
+        protected UndeclaredThrowableException(java.lang.Throwable exception) : base(exception) {
         }
-    }
+
+        public UndeclaredThrowableException(Throwable exception, String detailMessage)
+            : base(detailMessage, exception)
+        {
+        }
+
+        public Throwable getUndeclaredThrowable () {
+          return this.getCause();
+        }
+
+   }
 }

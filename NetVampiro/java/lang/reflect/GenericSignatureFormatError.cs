@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at 
@@ -10,21 +10,22 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *  
+ *
  *  Copyright © 2020 Sebastian Ritter
  */
-
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.net
-{
-    [Serializable]
-    public class InetAddress : java.io.Serializable
-    {
-        public static InetAddress getByName(String host)
-        {
-            throw new java.lang.UnsupportedOperationException("Not yet implemented");
-        }
-    }
+namespace biz.ritter.javapi.lang.reflect {
+
+	public class GenericSignatureFormatError : java.lang.ClassFormatError {
+	
+	    private const long serialVersionUID = 0L;
+	
+	    public GenericSignatureFormatError() :base (){
+	    }
+	
+	    public GenericSignatureFormatError(String detailMessage) : base(detailMessage){
+	    }
+	}
 }

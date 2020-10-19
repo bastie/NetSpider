@@ -1,5 +1,11 @@
 * VampireApi 0.11.0
-
+  - java.lang.System.Logger.Level
+  - java.lang.reflect.UndeclaredThrowableException
+  - java.lang.reflect.GenericSignatureFormatException
+  - java.net.ContentHandlerFactory
+  - java.net.ContentHandler
+  - java.net.CookiePolicy in parts
+  - java.net.CookieStore
 * VampireApi 0.10.0
   - outsource 3rd party types
   - some litte Java 15 extensions from release notes

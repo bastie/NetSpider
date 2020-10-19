@@ -53,7 +53,6 @@ To Implement:
      - java.lang.Character.UnicodeScript
      - java.lang.ProcessBuilder.Redirect.Type
      - java.lang.StackWalker.Option
-     - java.lang.System.Logger.Level
      - java.lang.Thread.State
      - java.lang.EnumConstantNotPresentException
      - java.lang.LayerInstantiationException
@@ -95,12 +94,7 @@ To Implement:
      - java.lang.reflect.InaccessibleObjectException
      - java.lang.reflect.MalformedParameterizedTypeException
      - java.lang.reflect.MalformedParametersExeption
-     - java.lang.reflect.UndeclaredThrowableException
-     - java.lang.reflect.GenericSignatureFormatException
      - java.lang.runtime.*
-     - java.net.ContentHandlerfactory
-     - java.net.CookiePolicy
-     - java.net.CookieStore
      - java.net.DatagramSocketImplFactory
      - java.net.FileNameMap
      - java.net.ProtocolFamily
@@ -109,12 +103,10 @@ To Implement:
      - java.net.Authenticator
      - java.net.CacheRequest
      - java.net.CacheResponse
-     - java.net.ContentHandler
      - java.net.CookieHandler
      - java.net.DatagramPaket
      - java.net.DatagramSocket
      - java.net.DatagramSocketImpl
-     - java.net.HttpCookie
      - java.net.HttpURLConnection
      - java.net.IDN
      - java.net.Inet4Address
@@ -138,6 +130,9 @@ To Implement:
      - java.lang.Iterable
      - java.lang.Runtime
      - java.lang.System
+     - java.net.InetAddress
+     - java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER
+     - java.net.HttpCookie
  - Serialism in Java format (see ... and ...)
  - rename sources in java.lang.ref without package name
  
