@@ -1,4 +1,4 @@
-# *J*ust *a*nother *v*ampire *A*pi Project
+# *J*ust *a*nother *v*ampire *A*pi Project 4 .net
 
 
   As same as bloodhound let us reimplement the Java API.
