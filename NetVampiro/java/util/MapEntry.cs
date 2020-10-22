@@ -48,7 +48,7 @@ namespace biz.ritter.javapi.util
             {
                 return base.MemberwiseClone();
             }
-            catch (java.lang.CloneNotSupportedException e)
+            catch (java.lang.CloneNotSupportedException)
             {
                 return null;
             }

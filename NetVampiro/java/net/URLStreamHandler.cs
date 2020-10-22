@@ -149,7 +149,7 @@ namespace biz.ritter.javapi.net
                     } else {
                         portIdx = -1;
                     }
-                } catch (Exception e) {
+                } catch (Exception) {
                     // Ignored
                 }
             }
@@ -385,7 +385,7 @@ namespace biz.ritter.javapi.net
                 }
                 return InetAddress.getByName(host);
             }
-            catch (UnknownHostException e)
+            catch (UnknownHostException)
             {
                 return null;
             }

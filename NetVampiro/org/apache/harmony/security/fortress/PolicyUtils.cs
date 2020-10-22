@@ -180,7 +180,7 @@ namespace org.apache.harmony.security.fortress
                     java.lang.reflect.Constructor ctor = targetType.getConstructor(argTypes[i]);
                     return (java.security.Permission)ctor.newInstance(args[i]);
                 }
-                catch (java.lang.NoSuchMethodException ignore) { }
+                catch (java.lang.NoSuchMethodException) { }
             }
             throw new java.lang.IllegalArgumentException("No suitable constructors found in permission class : " + targetType + ". Zero, one or two-argument constructor is expected");
         }

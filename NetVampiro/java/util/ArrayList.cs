@@ -280,7 +280,7 @@ namespace biz.ritter.javapi.util
                 ArrayList<E> newList = new ArrayList<E> (this.sizeJ);
                 newList.addAll(this);
                 return newList;
-            } catch (java.lang.CloneNotSupportedException e) {
+            } catch (java.lang.CloneNotSupportedException) {
                 return null;
             }
         }

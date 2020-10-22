@@ -244,7 +244,7 @@ namespace biz.ritter.javapi.io
                         this.wait(1000);
                     }
                 }
-                catch (java.lang.InterruptedException e)
+                catch (java.lang.InterruptedException)
                 {
                     throw new InterruptedIOException();
                 }
@@ -359,7 +359,7 @@ namespace biz.ritter.javapi.io
                         this.wait(1000);
                     }
                 }
-                catch (java.lang.InterruptedException e)
+                catch (java.lang.InterruptedException)
                 {
                     throw new InterruptedIOException();
                 }
@@ -455,7 +455,7 @@ namespace biz.ritter.javapi.io
                     }
                 }
             }
-            catch (java.lang.InterruptedException e)
+            catch (java.lang.InterruptedException)
             {
                 throw new InterruptedIOException();
             }

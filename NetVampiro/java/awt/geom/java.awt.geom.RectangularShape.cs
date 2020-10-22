@@ -130,7 +130,7 @@ public abstract class RectangularShape : Shape, java.lang.Cloneable {
     {
         try {
             return base.MemberwiseClone();
-        } catch (java.lang.CloneNotSupportedException e) {
+        } catch (java.lang.CloneNotSupportedException) {
             throw new java.lang.InternalError();
         }
     }

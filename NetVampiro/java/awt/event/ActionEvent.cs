@@ -50,7 +50,7 @@ namespace biz.ritter.javapi.awt.eventj
         }
 
         public ActionEvent(Object source, int id, String command, int modifiers) :
-            this(source, id, command, 0l, modifiers)
+            this(source, id, command, 0L, modifiers)
         {
         }
 

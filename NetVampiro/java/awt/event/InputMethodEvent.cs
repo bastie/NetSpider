@@ -49,7 +49,7 @@ public class InputMethodEvent : AWTEvent {
                             int commitedCharCount,
                             java.awt.font.TextHitInfo caret,
                             java.awt.font.TextHitInfo visiblePos) :
-        this(src, id, 0l, text, commitedCharCount, caret, visiblePos){
+        this(src, id, 0L, text, commitedCharCount, caret, visiblePos){
     }
 
     public InputMethodEvent(Component src, int id, long when,

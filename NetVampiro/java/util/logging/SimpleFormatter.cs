@@ -57,7 +57,7 @@ public class SimpleFormatter : Formatter {
                 if (pw != null) {
                     try {
                         pw.close();
-                    } catch (Exception e) {
+                    } catch (Exception) {
                         // ignore
                     }
                 }

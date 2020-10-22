@@ -366,7 +366,7 @@ namespace biz.ritter.javapi.lang
                 System.Text.Encoding enc = Encoding.GetEncoding(charsetName);
                 return enc.GetBytes(this);
             }
-            catch (ArgumentException toThrow)
+            catch (ArgumentException)
             {
                 throw new java.io.UnsupportedEncodingException(charsetName);
             }

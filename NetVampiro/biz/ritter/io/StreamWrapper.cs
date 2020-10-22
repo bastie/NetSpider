@@ -126,19 +126,19 @@ namespace biz.ritter.io
           this.baseWriter = writer;
 	    }
 	    
-	    public void close()	{
+	    public override void close()	{
 	        this.baseWriter.close();
 	    }
 	    
-	    public void flush(){
+	    public override void flush(){
 	        this.baseWriter.flush();
 	    }
 	    
-	    public void write(byte[] b) { 
+	    public override void write(byte[] b) { 
 	        this.baseWriter.write(new java.lang.StringJ(b));
 	    }
 	    
-	    public void write(byte[] b, int off, int len){
+	    public override void write(byte[] b, int off, int len){
 	        this.baseWriter.write(new java.lang.StringJ(b,off,len));
 	    }
 	    

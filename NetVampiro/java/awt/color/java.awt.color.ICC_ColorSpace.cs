@@ -133,7 +133,7 @@ namespace biz.ritter.javapi.awt.color
                         ICC_Profile.icPerceptual};
                     toXYZTransform = new ICC_Transform(profiles, intents);
                 }
-                catch (CMMException e)
+                catch (CMMException)
                 { // No such tag, use what we can
                     toXYZTransform = new ICC_Transform(profiles);
                 }

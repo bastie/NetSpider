@@ -124,7 +124,7 @@ namespace biz.ritter.javapi.util.jar
             // Try to read get a reference to the bytes directly
             try {
                 buf = org.apache.harmony.luni.util.InputStreamHelper.expose(isJ);
-            } catch (java.lang.UnsupportedOperationException uoe) {
+            } catch (java.lang.UnsupportedOperationException) {
                 buf = readFully(isJ);
             }
 

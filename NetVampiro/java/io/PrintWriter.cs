@@ -247,7 +247,7 @@ namespace biz.ritter.javapi.io
                 if (outJ != null) {
                     try {
                         outJ.close();
-                    } catch (IOException e) {
+                    } catch (IOException) {
                         setError();
                     }
                     outJ = null;
@@ -266,7 +266,7 @@ namespace biz.ritter.javapi.io
                 if (outJ != null) {
                     try {
                         outJ.flush();
-                    } catch (IOException e) {
+                    } catch (IOException) {
                         setError();
                     }
                 } else {
@@ -686,7 +686,7 @@ namespace biz.ritter.javapi.io
                 if (outJ != null) {
                     try {
                         outJ.write(buf, offset, count);
-                    } catch (IOException e) {
+                    } catch (IOException) {
                         setError();
                     }
                 } else {

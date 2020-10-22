@@ -88,7 +88,7 @@ public class MemoryHandler : Handler {
         String targetName = manager.getProperty(className + ".target"); //$NON-NLS-1$
         try {
             target = (Handler) java.lang.Class.forName(targetName).newInstance();
-                    } catch (Exception e) {
+                    } catch (Exception) {
             // logging.10=Cannot load target handler:{0}
             throw new java.lang.RuntimeException("Cannot load target handler: "+ //$NON-NLS-1$
                     targetName);

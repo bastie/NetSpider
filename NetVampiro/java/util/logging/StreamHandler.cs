@@ -120,7 +120,7 @@ public class StreamHandler : Handler {
         } else {
             try {
                 this.writer = new java.io.OutputStreamWriter(this.os, getEncoding());
-            } catch (java.io.UnsupportedEncodingException e) {
+            } catch (java.io.UnsupportedEncodingException) {
                 /*
                  * Should not happen because it's checked in
                  * super.initProperties().

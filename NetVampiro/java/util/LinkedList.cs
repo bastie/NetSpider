@@ -269,7 +269,7 @@ namespace biz.ritter.javapi.util
                 newList.voidLink.next = newList.voidLink;
                 newList.addAll(this);
                 return newList;
-            } catch (java.lang.CloneNotSupportedException e) {
+            } catch (java.lang.CloneNotSupportedException) {
                 return null;
             }
         }

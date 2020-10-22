@@ -191,7 +191,7 @@ namespace biz.ritter.javapi.util.prefs
                         {
                             reader.close();
                         }
-                        catch (java.io.IOException e)
+                        catch (java.io.IOException)
                         {
                             // ignore
                         }

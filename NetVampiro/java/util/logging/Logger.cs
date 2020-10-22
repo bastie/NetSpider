@@ -466,7 +466,7 @@ namespace biz.ritter.javapi.util.logging
                 if (handlers.remove(handler)) {
                     handler.close();
                 }
-            } catch (Exception ignored) {
+            } catch (Exception) {
             }
         }
     }

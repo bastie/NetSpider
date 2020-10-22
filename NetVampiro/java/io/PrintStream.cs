@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.io
                     throw new UnsupportedEncodingException(enc);
                 }
             }
-            catch (java.nio.charset.IllegalCharsetNameException e)
+            catch (java.nio.charset.IllegalCharsetNameException)
             {
                 throw new UnsupportedEncodingException(enc);
             }
@@ -290,7 +290,7 @@ namespace biz.ritter.javapi.io
                         outJ.close();
                         outJ = null;
                     }
-                    catch (IOException e)
+                    catch (IOException)
                     {
                         setError();
                     }
@@ -315,7 +315,7 @@ namespace biz.ritter.javapi.io
                         outJ.flush();
                         return;
                     }
-                    catch (IOException e)
+                    catch (IOException)
                     {
                         // Ignored, fall through to setError
                     }
@@ -568,7 +568,7 @@ namespace biz.ritter.javapi.io
                         write(str.getBytes(encoding));
                     }
                 }
-                catch (IOException e)
+                catch (IOException)
                 {
                     setError();
                 }
@@ -779,7 +779,7 @@ namespace biz.ritter.javapi.io
                         flush();
                     }
                 }
-                catch (IOException e)
+                catch (IOException)
                 {
                     setError();
                 }
@@ -819,7 +819,7 @@ namespace biz.ritter.javapi.io
                         flush();
                     }
                 }
-                catch (IOException e)
+                catch (IOException)
                 {
                     setError();
                 }

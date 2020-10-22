@@ -75,7 +75,7 @@ namespace biz.ritter.javapi.text
         public virtual Object clone() {
             try {
                 return base.MemberwiseClone();
-            } catch (java.lang.CloneNotSupportedException e) {
+            } catch (java.lang.CloneNotSupportedException) {
                 return null;
             }
         }

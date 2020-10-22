@@ -395,7 +395,7 @@ public abstract class Policy {
                         permissions.add(elements.nextElement());
                     }
                 }
-            } catch (java.lang.NullPointerException e) {
+            } catch (java.lang.NullPointerException) {
                 // ignore the exception, just add nothing to the result set
             }
 
@@ -444,7 +444,7 @@ public abstract class Policy {
             }
             try {
                 implies = total.implies(permission);
-            } catch (java.lang.NullPointerException e) {
+            } catch (java.lang.NullPointerException) {
                 // return false instead of throwing the NullPointerException
                 implies = false;
             }
@@ -500,7 +500,7 @@ public abstract class Policy {
                     return (Policy) java.lang.Class.forName(defaultClass, true,
                             java.lang.ClassLoader.getSystemClassLoader()).newInstance();
                 }
-                catch (Exception e) {
+                catch (Exception) {
                     //TODO log error 
                     //System.err.println("Error loading policy provider <" 
                     //                 + defaultClass + "> : " + e 

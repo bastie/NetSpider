@@ -175,7 +175,7 @@ namespace biz.ritter.javapi.util
                 }
                 return clone;
             }
-            catch (java.lang.CloneNotSupportedException e)
+            catch (java.lang.CloneNotSupportedException)
             {
                 return null;
             }

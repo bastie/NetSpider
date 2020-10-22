@@ -365,7 +365,7 @@ namespace biz.ritter.javapi.util
                         // no tasks scheduled -- sleep until any task appear
                         try {
                             this.wait();
-                        } catch (java.lang.InterruptedException ignored) {
+                        } catch (java.lang.InterruptedException) {
                         }
                         continue;
                     }
@@ -389,7 +389,7 @@ namespace biz.ritter.javapi.util
                         // sleep!
                         try {
                             this.wait(timeToSleep);
-                        } catch (java.lang.InterruptedException ignored) {
+                        } catch (java.lang.InterruptedException) {
                         }
                         continue;
                     }

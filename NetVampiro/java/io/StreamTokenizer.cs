@@ -333,7 +333,7 @@ namespace biz.ritter.javapi.io
                 }
                 try {
                     nval = java.lang.Double.valueOf(digits.toString()).doubleValue();
-                } catch (java.lang.NumberFormatException e) {
+                } catch (java.lang.NumberFormatException) {
                     // Unsure what to do, will write test.
                     nval = 0;
                 }

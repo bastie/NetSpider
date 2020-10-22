@@ -298,7 +298,7 @@ namespace biz.ritter.javapi.beans
             {
                 return loadBeanInfo(beanInfoClassName, beanClass);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 // fall through
             }
@@ -315,7 +315,7 @@ namespace biz.ritter.javapi.beans
                 {
                     theBeanInfo = loadBeanInfo(beanInfoClassName, beanClass);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     // ignore, try next one
                     continue;
@@ -333,7 +333,7 @@ namespace biz.ritter.javapi.beans
                 {
                     return loadBeanInfo(beanClass.getName(), beanClass);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     // fall through
                 }

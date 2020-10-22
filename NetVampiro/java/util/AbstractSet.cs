@@ -54,9 +54,9 @@ namespace biz.ritter.javapi.util
 
                 try {
                     return size() == s.size() && containsAll(s);
-                } catch (java.lang.NullPointerException ignored) {
+                } catch (java.lang.NullPointerException) {
                     return false;
-                } catch (java.lang.ClassCastException ignored) {
+                } catch (java.lang.ClassCastException) {
                     return false;
                 }
             }

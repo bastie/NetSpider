@@ -174,7 +174,7 @@ namespace biz.ritter.javapi.awt
         public Event evt;
 
         public Event(Object target, int id, Object arg) :
-            this(target, 0l, id, 0, 0, 0, 0, arg)
+            this(target, 0L, id, 0, 0, 0, 0, arg)
         {
         }
 

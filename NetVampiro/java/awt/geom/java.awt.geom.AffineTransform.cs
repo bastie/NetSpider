@@ -682,7 +682,7 @@ namespace biz.ritter.javapi.awt.geom
             {
                 return base.MemberwiseClone();
             }
-            catch (java.lang.CloneNotSupportedException e)
+            catch (java.lang.CloneNotSupportedException)
             {
                 throw new java.lang.InternalError();
             }

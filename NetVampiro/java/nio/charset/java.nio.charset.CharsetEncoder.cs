@@ -231,7 +231,7 @@ namespace biz.ritter.javapi.nio.charset
             bool result = true;
             try {
                 this.encode(cb);
-            } catch (CharacterCodingException e) {
+            } catch (CharacterCodingException) {
                 result = false;
             }
             onMalformedInput(malformBak);

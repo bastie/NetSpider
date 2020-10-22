@@ -482,7 +482,7 @@ namespace biz.ritter.javapi.nio.charset
             String encoding = java.lang.SystemJ.getProperty("file.encoding"); //$NON-NLS-1$
             try {
                 defaultCharset = Charset.forName(encoding);
-            } catch (UnsupportedCharsetException e) {
+            } catch (UnsupportedCharsetException) {
                 defaultCharset = Charset.forName("UTF-8"); //$NON-NLS-1$
             }
             return defaultCharset;

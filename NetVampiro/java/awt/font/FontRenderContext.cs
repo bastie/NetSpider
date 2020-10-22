@@ -61,7 +61,7 @@ namespace biz.ritter.javapi.awt.font
                 {
                     return equals((FontRenderContext)obj);
                 }
-                catch (java.lang.ClassCastException e)
+                catch (java.lang.ClassCastException)
                 {
                     return false;
                 }

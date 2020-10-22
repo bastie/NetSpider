@@ -164,7 +164,7 @@ namespace biz.ritter.javapi.io
                 else this.info.Delete();
                 return !this.exists();
             }
-            catch (System.IO.IOException notDeleted)
+            catch (System.IO.IOException)
             {
                 return false;
             }
@@ -199,7 +199,7 @@ namespace biz.ritter.javapi.io
                     canReadCheckStream.Close();
                     return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }
@@ -222,7 +222,7 @@ namespace biz.ritter.javapi.io
                     canReadCheckStream.Close();
                     return true;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     return false;
                 }
@@ -290,7 +290,7 @@ namespace biz.ritter.javapi.io
             {
                 this.info.MoveTo(dest.getAbsolutePath());
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new java.lang.SecurityException();
             }

@@ -474,7 +474,7 @@ namespace biz.ritter.javapi.text
                     clone.attributesAllowed = (java.util.HashSet<AttributedCharacterIteratorNS.Attribute>) attributesAllowed.clone();
                 }
                 return clone;
-            } catch (java.lang.CloneNotSupportedException e) {
+            } catch (java.lang.CloneNotSupportedException) {
                 return null;
             }
         }

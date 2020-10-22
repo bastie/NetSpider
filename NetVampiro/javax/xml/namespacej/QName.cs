@@ -92,7 +92,7 @@ namespace biz.ritter.javapix.xml.namespacej
             {
                 compatPropValue = java.lang.SystemJ.getProperty("org.apache.xml.namespace.QName.useCompatibleSerialVersionUID");
             }
-            catch (Exception e) { }
+            catch (Exception) { }
             // If 1.0 use compatability serialVersionUID
             serialVersionUID = !"1.0".equals(compatPropValue) ? defaultSerialVersionUID : compatabilitySerialVersionUID;
         }

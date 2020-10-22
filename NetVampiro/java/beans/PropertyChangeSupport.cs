@@ -20,7 +20,7 @@ namespace biz.ritter.javapi.beans
     [Serializable]
 public class PropertyChangeSupport : java.io.Serializable {
 
-    private static readonly long serialVersionUID = 6401253773779951803l;
+    private static readonly long serialVersionUID = 6401253773779951803L;
         [NonSerialized]
     private java.util.AbstractList<PropertyChangeListener> globalListeners = new java.util.ArrayList<PropertyChangeListener>();
 

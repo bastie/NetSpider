@@ -175,7 +175,7 @@ namespace biz.ritter.javapi.util.zip
                 while ((inflated = inf.inflate(buf)) > 0) {
                     outJ.write(buf, 0, inflated);
                 }
-            } catch (DataFormatException e) {
+            } catch (DataFormatException) {
                 throw new ZipException();
             }
         }

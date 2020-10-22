@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.beans
                 {
                     setReadMethod(beanClass, getterName);
                 }
-                catch (IntrospectionException e)
+                catch (IntrospectionException)
                 {
                     setReadMethod(beanClass, createDefaultMethodName(propertyName,
                             "get")); //$NON-NLS-1$

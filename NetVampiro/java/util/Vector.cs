@@ -265,7 +265,7 @@ namespace biz.ritter.javapi.util
                     Vector<E> vector = (Vector<E>) base.MemberwiseClone();
                     vector.elementData = (E[])elementData.Clone();
                     return vector;
-                } catch (java.lang.CloneNotSupportedException e) {
+                } catch (java.lang.CloneNotSupportedException) {
                     return null;
                 }
             }
@@ -622,7 +622,7 @@ namespace biz.ritter.javapi.util
             lock (this) {
                 try {
                     return (E) elementData[elementCount - 1];
-                } catch (java.lang.IndexOutOfBoundsException e) {
+                } catch (java.lang.IndexOutOfBoundsException) {
                     throw new NoSuchElementException();
                 }
             }

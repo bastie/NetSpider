@@ -203,7 +203,7 @@ namespace biz.ritter.javapi.util.jar
             Attributes clone;
             try {
                 clone = (Attributes) this.MemberwiseClone();
-            } catch (java.lang.CloneNotSupportedException e) {
+            } catch (java.lang.CloneNotSupportedException) {
                 return null;
             }
             clone.map = (java.util.Map<Object, Object>) ((java.util.HashMap<Object,Object>) map).clone();

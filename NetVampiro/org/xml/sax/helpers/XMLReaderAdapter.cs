@@ -224,7 +224,7 @@ namespace org.xml.sax.helpers
                 xmlReader.setFeature("http://xml.org/sax/features/namespaces",
                                      false);
             }
-            catch (SAXException e)
+            catch (SAXException)
             {
                 // NO OP: it's just extra information, and we can ignore it
             }

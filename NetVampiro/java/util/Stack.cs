@@ -55,7 +55,7 @@ namespace biz.ritter.javapi.util
             lock (this) {
                 try {
                     return (E) elementData[elementCount - 1];
-                } catch (java.lang.IndexOutOfBoundsException e) {
+                } catch (java.lang.IndexOutOfBoundsException) {
                     throw new EmptyStackException();
                 }
             }

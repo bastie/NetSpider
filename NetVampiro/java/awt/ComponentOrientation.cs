@@ -51,7 +51,7 @@ public sealed class ComponentOrientation : java.io.Serializable {
         try {
             obj = bdl.getObject("Orientation"); //$NON-NLS-1$
         }
-        catch (java.util.MissingResourceException mre) {
+        catch (java.util.MissingResourceException) {
             obj = null;
         }
         if (obj is ComponentOrientation) {

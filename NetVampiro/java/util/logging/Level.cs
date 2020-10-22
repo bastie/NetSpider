@@ -103,7 +103,7 @@ public class Level : java.io.Serializable {
         try {
             nameAsInt = java.lang.Integer.parseInt(name);
             isNameAnInt = true;
-        } catch (java.lang.NumberFormatException e) {
+        } catch (java.lang.NumberFormatException) {
             nameAsInt = 0;
             isNameAnInt = false;
         }
@@ -204,7 +204,7 @@ public class Level : java.io.Serializable {
             try {
                 rb = ResourceBundle.getBundle(resourceBundleName, Locale
                         .getDefault(), this.GetType().getClass().getClassLoader());
-            } catch (MissingResourceException e) {
+            } catch (MissingResourceException) {
                 rb = null;
             }
         }
@@ -283,7 +283,7 @@ public class Level : java.io.Serializable {
         if (resourceBundleName != null) {
             try {
                 rb = ResourceBundle.getBundle(resourceBundleName);
-            } catch (MissingResourceException e) {
+            } catch (MissingResourceException) {
                 rb = null;
             }
         }
@@ -303,7 +303,7 @@ public class Level : java.io.Serializable {
 
         try {
             return rb.getString(name);
-        } catch (MissingResourceException e) {
+        } catch (MissingResourceException) {
             return name;
         }
     }

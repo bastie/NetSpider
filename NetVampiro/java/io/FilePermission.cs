@@ -106,7 +106,7 @@ public sealed class FilePermission : java.security.Permission, java.io.Serializa
                         public String run() {*/
                             try {
                                 canonPath = new File(path).getCanonicalPath();
-                            } catch (IOException e) {
+                            } catch (IOException) {
                                 canonPath = path;
                             }/*
                         }

@@ -331,7 +331,7 @@ public sealed class UnresolvedPermission : Permission, java.io.Serializable {
                 return PolicyUtils.instantiatePermission(targetType,
                                                          name,
                                                          actions);
-            } catch (Exception ignore) {
+            } catch (Exception) {
                 //TODO log warning?
             }
         }

@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.awt.eventj
 
         public HierarchyEvent(Component source, int id, Component changed,
                               Container changedParent) :
-            this(source, id, changed, changedParent, 0l)
+            this(source, id, changed, changedParent, 0L)
         {
         }
 

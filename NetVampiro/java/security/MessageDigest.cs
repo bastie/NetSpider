@@ -368,7 +368,7 @@ namespace biz.ritter.javapi.security
                 MessageDigest md = (MessageDigest)clone();
                 return md.digest().Length;
             }
-            catch (java.lang.CloneNotSupportedException e)
+            catch (java.lang.CloneNotSupportedException)
             {
                 return 0;
             }

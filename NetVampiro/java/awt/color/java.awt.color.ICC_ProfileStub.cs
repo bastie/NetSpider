@@ -80,7 +80,7 @@ namespace biz.ritter.javapi.awt.color
             throw new java.lang.UnsupportedOperationException("Stub cannot perform this operation"); //$NON-NLS-1$
         }
 
-        protected void finalize()
+        private void finalize()
         {
         }
 

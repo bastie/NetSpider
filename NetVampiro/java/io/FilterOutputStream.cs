@@ -47,7 +47,7 @@ namespace biz.ritter.javapi.io
             {
                 outJ.flush();
             }
-            catch (IOException ignored) { }
+            catch (IOException) { }
             outJ.close();
         }
     }

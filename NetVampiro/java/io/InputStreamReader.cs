@@ -235,7 +235,7 @@ namespace biz.ritter.javapi.io
                                 // we could return the result without blocking read
                                 break;
                             }
-                        } catch (IOException e) {
+                        } catch (IOException) {
                             // available didn't work so just try the read
                         }
 
@@ -314,7 +314,7 @@ namespace biz.ritter.javapi.io
                 }
                 try {
                     return bytes.hasRemaining() || inJ.available() > 0;
-                } catch (IOException e) {
+                } catch (IOException) {
                     return false;
                 }
             }

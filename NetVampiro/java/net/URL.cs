@@ -616,13 +616,13 @@ namespace biz.ritter.javapi.net
                         }
                         return;
                     }
-                    catch (java.lang.IllegalAccessException e)
+                    catch (java.lang.IllegalAccessException)
                     {
                     }
-                    catch (java.lang.InstantiationException e)
+                    catch (java.lang.InstantiationException)
                     {
                     }
-                    catch (java.lang.ClassNotFoundException e)
+                    catch (java.lang.ClassNotFoundException)
                     {
                     }
                 }
@@ -637,13 +637,13 @@ namespace biz.ritter.javapi.net
                 strmHandler = (URLStreamHandler)java.lang.Class.forName(className)
                         .newInstance();
             }
-            catch (java.lang.IllegalAccessException e)
+            catch (java.lang.IllegalAccessException)
             {
             }
-            catch (java.lang.InstantiationException e)
+            catch (java.lang.InstantiationException)
             {
             }
-            catch (java.lang.ClassNotFoundException e)
+            catch (java.lang.ClassNotFoundException)
             {
             }
             if (strmHandler != null)

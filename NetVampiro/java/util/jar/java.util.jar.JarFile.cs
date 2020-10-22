@@ -157,7 +157,7 @@ namespace biz.ritter.javapi.util.jar
                     isJ.close();
                 }
                 manifestEntry = null;  // Can discard the entry now.
-            } catch (java.lang.NullPointerException e) {
+            } catch (java.lang.NullPointerException) {
                 manifestEntry = null;
             }
             return manifest;

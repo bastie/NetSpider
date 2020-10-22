@@ -184,7 +184,7 @@ namespace biz.ritter.javapi.util.logging
                 java.lang.Class clazz = java.lang.ClassLoader.getSystemClassLoader().loadClass(className);
                 return clazz.newInstance();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 try
                 {
@@ -247,7 +247,7 @@ namespace biz.ritter.javapi.util.logging
                         {
                             input.close();
                         }
-                        catch (Exception e)
+                        catch (Exception)
                         {// ignore
                         }
                     }

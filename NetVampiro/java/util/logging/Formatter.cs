@@ -65,7 +65,7 @@ public abstract class Formatter {
         if (null != (rb = r.getResourceBundle())) {
             try {
                 pattern = rb.getString(pattern);
-            } catch (Exception e) {
+            } catch (Exception) {
                 pattern = r.getMessage();
             }
         }
@@ -79,7 +79,7 @@ public abstract class Formatter {
                     && paramsJ.Length > 0) {
                 try {
                     pattern = java.text.MessageFormat.format(pattern, paramsJ);
-                } catch (java.lang.IllegalArgumentException e) {
+                } catch (java.lang.IllegalArgumentException) {
                     pattern = r.getMessage();
                 }
             }

@@ -58,7 +58,7 @@ namespace biz.ritter.javapi.io
                         }
                     }
                 }
-                catch (java.io.IOException ignored) /* catch, because the need to return readed byte count*/{ }
+                catch (java.io.IOException) /* catch, because the need to return readed byte count*/{ }
                 return readedByteCount;
             }
         }

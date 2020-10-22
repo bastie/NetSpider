@@ -415,7 +415,7 @@ namespace biz.ritter.javapi.awt.geom
             java.lang.SystemJ.arraycopy(this.points,0,newTypes,0,newPoints.Length);
             //p.points = points.clone();
             return p;
-        } catch (java.lang.CloneNotSupportedException e) {
+        } catch (java.lang.CloneNotSupportedException) {
             throw new java.lang.InternalError();
         }
     }

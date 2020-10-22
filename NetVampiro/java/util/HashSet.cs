@@ -120,7 +120,7 @@ namespace biz.ritter.javapi.util
                 HashSet<E> clone = (HashSet<E>) MemberwiseClone();
                 clone.backingMap = (HashMap<E, HashSet<E>>) MemberwiseClone();
                 return clone;
-            } catch (java.lang.CloneNotSupportedException e) {
+            } catch (java.lang.CloneNotSupportedException) {
                 return null;
             }
         }

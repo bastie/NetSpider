@@ -126,7 +126,7 @@ namespace biz.ritter.javapi.util
                 TimeZone zone = (TimeZone)base.MemberwiseClone();
                 return zone;
             }
-            catch (java.lang.CloneNotSupportedException e)
+            catch (java.lang.CloneNotSupportedException)
             {
                 return null;
             }

@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.lang
             {
                 throw new java.lang.NumberFormatException(fe.Message);
             }
-            catch (OverflowException oe)
+            catch (OverflowException)
             {
                 throw new java.lang.NumberFormatException();
             }

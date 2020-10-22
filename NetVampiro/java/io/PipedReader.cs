@@ -265,12 +265,12 @@ public class PipedReader : Reader {
                     lockJ.notifyAll();
                     lockJ.wait(1000);
                 }
-            } catch (java.lang.InterruptedException e) {
+            } catch (java.lang.InterruptedException) {
                 throw new InterruptedIOException();
             }
-			catch (System.Threading.ThreadInterruptedException e) {
-					throw new InterruptedIOException ();
-					}
+			catch (System.Threading.ThreadInterruptedException) {
+		    	throw new InterruptedIOException ();
+			}
 
             int copyLength = 0;
             /* Copy chars from out to end of buffer first */
@@ -376,10 +376,10 @@ public class PipedReader : Reader {
 							throw new IOException("Pipe broken"); //$NON-NLS-1$
                     }
                 }
-            } catch (java.lang.InterruptedException e) {
+            } catch (java.lang.InterruptedException) {
                 throw new InterruptedIOException();
             }
-				catch (System.Threading.ThreadInterruptedException e) {
+				catch (System.Threading.ThreadInterruptedException) {
 					throw new InterruptedIOException ();
 				}
 				if (data != null) {
@@ -436,10 +436,10 @@ public class PipedReader : Reader {
 								throw new IOException("Pipe broken"); //$NON-NLS-1$
                         }
                     }
-                } catch (java.lang.InterruptedException e) {
+                } catch (java.lang.InterruptedException) {
                     throw new InterruptedIOException();
                 }
-					catch (System.Threading.ThreadInterruptedException e) {
+					catch (System.Threading.ThreadInterruptedException) {
 						throw new InterruptedIOException ();
 					}
 					if (data == null) {

@@ -52,7 +52,7 @@ namespace biz.ritter.javapi.security
                     loaded = true;
                     isJ.close();
                 }
-                catch (java.io.IOException e)
+                catch (java.io.IOException)
                 {
                     //                        System.err.println("Could not load Security properties file: "
                     //                                        + e);
@@ -74,7 +74,7 @@ namespace biz.ritter.javapi.security
                     {
                         securityFile = PolicyUtils.expand(securityFile, java.lang.SystemJ.getProperties());
                     }
-                    catch (PolicyUtils.ExpansionFailedException e)
+                    catch (PolicyUtils.ExpansionFailedException)
                     {
                         //                            System.err.println("Could not load custom Security properties file "
                         //                                    + securityFile +": " + e);
@@ -97,7 +97,7 @@ namespace biz.ritter.javapi.security
                         loaded = true;
                         isj.close();
                     }
-                    catch (java.io.IOException e)
+                    catch (java.io.IOException)
                     {
                         //                           System.err.println("Could not load custom Security properties file "
                         //                                   + securityFile +": " + e);
@@ -445,7 +445,7 @@ namespace biz.ritter.javapi.security
                         {
                             p = result.get(k);
                         }
-                        catch (java.lang.IndexOutOfBoundsException e)
+                        catch (java.lang.IndexOutOfBoundsException)
                         {
                             break;
                         }

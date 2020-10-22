@@ -106,7 +106,7 @@ sealed public class XMLReaderFactory
     
     // 1. try the JVM-instance-wide system property
     try { className = java.lang.SystemJ.getProperty (property); }
-    catch (java.lang.RuntimeException e) { /* normally fails for applets */ }
+    catch (java.lang.RuntimeException) { /* normally fails for applets */ }
 
     // 2. if that fails, try META-INF/services/
     if (className == null) {
@@ -126,7 +126,7 @@ sealed public class XMLReaderFactory
             className = reader.readLine ();
             input.close ();
         }
-        } catch (Exception e) {
+        } catch (Exception) {
         }
     }
 
@@ -150,7 +150,7 @@ sealed public class XMLReaderFactory
     // 4. panic -- adapt any SAX1 parser
     try {
         return new ParserAdapter (ParserFactory.makeParser ());
-    } catch (java.lang.Exception e) {
+    } catch (java.lang.Exception) {
         throw new SAXException ("Can't create default XMLReader; "
             + "is system property org.xml.sax.driver set?");
     }

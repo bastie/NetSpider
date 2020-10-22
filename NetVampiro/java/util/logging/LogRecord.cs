@@ -502,7 +502,7 @@ public class LogRecord : java.io.Serializable {
         if (null != resourceBundleName) {
             try {
                 resourceBundle = Logger.loadResourceBundle(resourceBundleName);
-            } catch (MissingResourceException e) {
+            } catch (MissingResourceException) {
                 // Cannot find the specified resource bundle
                 resourceBundle = null;
             }

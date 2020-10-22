@@ -53,7 +53,7 @@ namespace biz.ritter.javapi.util
         public override E get(int location) {
             try {
                 return listIterator(location).next();
-            } catch (NoSuchElementException e) {
+            } catch (NoSuchElementException) {
                 throw new java.lang.IndexOutOfBoundsException();
             }
         }
@@ -70,7 +70,7 @@ namespace biz.ritter.javapi.util
                 E result = it.next();
                 it.remove();
                 return result;
-            } catch (NoSuchElementException e) {
+            } catch (NoSuchElementException) {
                 throw new java.lang.IndexOutOfBoundsException();
             }
         }

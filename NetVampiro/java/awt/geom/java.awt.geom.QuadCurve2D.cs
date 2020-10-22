@@ -472,7 +472,7 @@ public abstract class QuadCurve2D : Shape, java.lang.Cloneable {
     public Object clone() {
         try {
             return base.MemberwiseClone();
-        } catch (java.lang.CloneNotSupportedException e) {
+        } catch (java.lang.CloneNotSupportedException) {
             throw new java.lang.InternalError();
         }
     }

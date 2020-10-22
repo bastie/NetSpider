@@ -90,12 +90,12 @@ namespace org.xml.sax.helpers
                 throw new
                 SAXException("SAX1 driver class " +
                          driver +
-                         " does not implement org.xml.sax.Parser");
+                         " does not implement org.xml.sax.Parser", e4);
             }
             catch (java.lang.NullPointerException e5)
             {
                 throw new
-                SAXException("System property org.xml.sax.parser not specified");
+                SAXException("System property org.xml.sax.parser not specified",e5);
             }
         }
 

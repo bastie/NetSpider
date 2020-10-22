@@ -85,7 +85,7 @@ namespace biz.ritter.javapi.sql
                             .forName(element, true, java.lang.ClassLoader
                                     .getSystemClassLoader());
                 }
-                catch (Exception /*Throwable*/ t)
+                catch (Exception /*Throwable*/ )
                 {
                     // Ignored
                 }
@@ -471,7 +471,7 @@ namespace biz.ritter.javapi.sql
                     return true;
                 }
             }
-            catch (Exception /*Throwable*/ t)
+            catch (Exception /*Throwable*/ )
             {
                 // Empty
             }

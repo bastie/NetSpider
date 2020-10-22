@@ -118,7 +118,7 @@ namespace biz.ritter.javapi.awt.geom
     public Object clone() {
         try {
             return base.MemberwiseClone();
-        } catch (java.lang.CloneNotSupportedException e) {
+        } catch (java.lang.CloneNotSupportedException) {
             throw new java.lang.InternalError();
         }
     }

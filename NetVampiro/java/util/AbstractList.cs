@@ -740,7 +740,7 @@ namespace biz.ritter.javapi.util
                 numLeft--;
                 return result;
             }
-            catch (java.lang.IndexOutOfBoundsException e)
+            catch (java.lang.IndexOutOfBoundsException)
             {
                 throw new NoSuchElementException();
             }
@@ -759,7 +759,7 @@ namespace biz.ritter.javapi.util
                         numLeft--; // we're removing after a call to previous()
                     }
                     outerInstance.remove(lastPosition);
-                } catch (java.lang.IndexOutOfBoundsException e) {
+                } catch (java.lang.IndexOutOfBoundsException) {
                     throw new ConcurrentModificationException();
                 }
             
@@ -796,7 +796,7 @@ namespace biz.ritter.javapi.util
                 expectedModCount = outInstance.modCount;
                 lastPosition = -1;
             }
-            catch (java.lang.IndexOutOfBoundsException e)
+            catch (java.lang.IndexOutOfBoundsException)
             {
                 throw new NoSuchElementException();
             }
@@ -827,7 +827,7 @@ namespace biz.ritter.javapi.util
                 lastPosition = index;
                 return result;
             }
-            catch (java.lang.IndexOutOfBoundsException e)
+            catch (java.lang.IndexOutOfBoundsException)
             {
                 throw new NoSuchElementException();
             }
@@ -849,7 +849,7 @@ namespace biz.ritter.javapi.util
             {
                 outInstance.set(lastPosition, obj);
             }
-            catch (java.lang.IndexOutOfBoundsException e)
+            catch (java.lang.IndexOutOfBoundsException)
             {
                 throw new java.lang.IllegalStateException();
             }

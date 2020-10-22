@@ -46,7 +46,7 @@ namespace biz.ritter.javapi.util.logging
 			}
 			try {
 				result = java.lang.Class.forName(className).newInstance();
-			} catch (Exception e) {
+			} catch (Exception) {
 				// ignore
 			}
 			return result;

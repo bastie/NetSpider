@@ -138,7 +138,7 @@ namespace biz.ritter.javapi.util
                 java.lang.SystemJ.arraycopy(bits,0,newBits,0,newBits.Length);
                 clone.bits = newBits;
                 return clone;
-            } catch (java.lang.CloneNotSupportedException e) {
+            } catch (java.lang.CloneNotSupportedException) {
                 return null;
             }
         }
