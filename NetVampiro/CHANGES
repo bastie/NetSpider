@@ -6,6 +6,17 @@
   - java.net.ContentHandler
   - java.net.CookiePolicy in parts
   - java.net.CookieStore
+  - java.lang.ref.Cleaner.Cleanable
+  - java.lang.ref.PhantomReference
+  - java.lang.EnumConstantNotPresentException
+  - java.lang.LayerInstantiationException
+  - java.lang.ReflextiveOperationException
+  - java.lang.BootStrapMethodError
+  - java.lang.ExceptionInInitializerError
+  - java.lang.IllegalAccessError
+  - java.lang.annotation.AnnotationTypeMismatchException
+  - java.lang.annotation.IncompleteAnnotationException
+  - java.lang.annotation.AnnotationFormatError
 * VampireApi 0.10.0
   - outsource 3rd party types
   - some litte Java 15 extensions from release notes

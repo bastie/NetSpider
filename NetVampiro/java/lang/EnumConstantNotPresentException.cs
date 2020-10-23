@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at 
@@ -11,23 +11,23 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *   Copyright © 2020 Sebastian Ritter
+ *  Copyright © 2020 Sebastian Ritter
  */
 using System;
-using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    [Serializable]
-    public class LinkageError : Error {
 
-        private static readonly long serialVersionUID = 3579600108157160122L;
-
-        public LinkageError() :base(){}
-
-        public LinkageError(String detailMessage):base(detailMessage) {
+    public class EnumConstantNotPresentException : RuntimeException
+    {
+        private readonly Enum type;
+        private readonly String name;
+        public EnumConstantNotPresentException (Enum reason, String constantName) : base (){
+            this.type = reason;
+            this.name = constantName;
         }
-        public LinkageError(String detailMessage, Throwable cause):base(detailMessage,cause) {
-        }
+
+        public Enum enumType() => this.type;
+        public String constantName() => this.name;
     }
 }

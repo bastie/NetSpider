@@ -54,23 +54,11 @@ To Implement:
      - java.lang.ProcessBuilder.Redirect.Type
      - java.lang.StackWalker.Option
      - java.lang.Thread.State
-     - java.lang.EnumConstantNotPresentException
-     - java.lang.LayerInstantiationException
-     - java.lang.ReflextiveOperationException
-     - java.lang.BootStrapMethodError
-     - java.lang.ExceptionInInitializerError
-     - java.lang.IllegalAccessError
      - java.lang.annotation.ElementType
      - java.lang.annotation.RetentionPolicy
-     - java.lang.annotation.AnnotationTypeMismatchException
-     - java.lang.annotation.IncompleteAnnotationException
-     - java.lang.annotation.AnnotationFormatException
      - java.lang.constant.*
      - java.lang.invoke.*
      - java.lang.module.*
-     - java.lang.ref.Cleaner.Cleanable
-     - java.lang.ref.Cleaner
-     - java.lang.ref.PhantomReference
      - java.lang.reflect.AnnotatedArrayType
      - java.lang.reflect.AnnotatedElement
      - java.lang.reflect.AnnotatedParameterizedType
@@ -95,6 +83,10 @@ To Implement:
      - java.lang.reflect.MalformedParameterizedTypeException
      - java.lang.reflect.MalformedParametersExeption
      - java.lang.runtime.*
+     - java.util.Optional
+     - java.util.OptionalDouble
+     - java.util.OptionalInt
+     - java.util.OptionalLong
      - java.net.DatagramSocketImplFactory
      - java.net.FileNameMap
      - java.net.ProtocolFamily
@@ -130,14 +122,22 @@ To Implement:
      - java.lang.Iterable
      - java.lang.Runtime
      - java.lang.System
+     - java.lang.ref.Cleaner
      - java.net.InetAddress
      - java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER
      - java.net.HttpCookie
+   + content changed
+     - java.util.Observable - deprecated since Java9
+     - java.util.Observer   - deprecated since Java9
  - Serialism in Java format (see ... and ...)
- - rename sources in java.lang.ref without package name
  
- 
- 
+
+Some projects needed:
+- Project to migrate GPL2 test as external project
+- CleanVampire projects  (the implementations with no deprecations for clean programmers)
+- VampireApi project (containts all implementationsthat works at full moon in Java 16, includes also CleanVampire for default programmers)
+- SunVampire projects (the sun is down and this classes are missing in Java 16 - includes also VampireApi for legacy programmers)
+
 Some tools are needed:
 
 In beginning:

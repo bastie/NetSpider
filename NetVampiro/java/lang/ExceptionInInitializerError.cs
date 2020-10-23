@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
  *  You may obtain a copy of the License at 
@@ -11,23 +11,19 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *   Copyright © 2020 Sebastian Ritter
+ *  Copyright © 2020 Sebastian Ritter
  */
 using System;
-using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.lang
 {
-    [Serializable]
-    public class LinkageError : Error {
 
-        private static readonly long serialVersionUID = 3579600108157160122L;
+    public class ExceptionInInitializerError : LinkageError
+    {
+        public ExceptionInInitializerError () : base (){}
+        public ExceptionInInitializerError(String message) : base (message){}
+        public ExceptionInInitializerError(Throwable cause) : base (String.Empty,cause){}
 
-        public LinkageError() :base(){}
-
-        public LinkageError(String detailMessage):base(detailMessage) {
-        }
-        public LinkageError(String detailMessage, Throwable cause):base(detailMessage,cause) {
-        }
+        public Exception getException () => (Exception) this.getCause();
     }
 }
