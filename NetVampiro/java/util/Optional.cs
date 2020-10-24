@@ -65,20 +65,8 @@ namespace biz.ritter.javapi.util {
             return value != null;
         }
 
-        public static Optional<T> absent() {
-            return empty();
-        }
-
-        public static Optional<T> fromNullable(T value) {
-            return ofNullable(value);
-        }
-
         public T or(T other) {
             return value != null ? value : other;
-        }
-
-        public T orNull() {
-            return value;
         }
 
 
