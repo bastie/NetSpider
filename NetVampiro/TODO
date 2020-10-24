@@ -156,3 +156,6 @@ Not implemented:
     (C) All types are declare, with hierarchie
     (D) All methods and fields are declare
     (E) TestCases
+
+String formatting:
+String.format ("Optional[%s]",value); ==> String.Format("Optional[{0}]", value);
