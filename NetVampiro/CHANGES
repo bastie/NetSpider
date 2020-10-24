@@ -17,6 +17,9 @@
   - java.lang.annotation.AnnotationTypeMismatchException
   - java.lang.annotation.IncompleteAnnotationException
   - java.lang.annotation.AnnotationFormatError
+  - java.util.Optional
+  - java.lang.constant.Constable
+  - java.lang.Enum
 * VampireApi 0.10.0
   - outsource 3rd party types
   - some litte Java 15 extensions from release notes

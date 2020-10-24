@@ -39,7 +39,6 @@ To Implement:
      - java.lang.Character.Subset
      - java.lang.Character.UnicodeBlock
      - java.lang.Compiler
-     - java.lang.Enum
      - java.lang.InheritableThreadLocal
      - java.lang.Module
      - java.lang.ModuleLayer
@@ -83,10 +82,10 @@ To Implement:
      - java.lang.reflect.MalformedParameterizedTypeException
      - java.lang.reflect.MalformedParametersExeption
      - java.lang.runtime.*
-     - java.util.Optional
      - java.util.OptionalDouble
      - java.util.OptionalInt
      - java.util.OptionalLong
+     - java.util.function.*
      - java.net.DatagramSocketImplFactory
      - java.net.FileNameMap
      - java.net.ProtocolFamily
@@ -127,6 +126,8 @@ To Implement:
      - java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER
      - java.net.HttpCookie
      - java.util.Optional    => java.util.function.* needed
+     - java.lang.constant.ConstantDesc
+     - java.lang.Enum
    + content changed
      - java.util.Observable - deprecated since Java9
      - java.util.Observer   - deprecated since Java9
