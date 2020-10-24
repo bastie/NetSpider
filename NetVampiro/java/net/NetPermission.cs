@@ -36,7 +36,7 @@ namespace biz.ritter.javapi.net
      * @see SecurityManager
      */
     [Serializable]
-    public sealed class NetPermission : java.security.BasicPermission
+    public sealed class NetPermission : java.security.BasicPermission, java.io.Serializable
     {
 
         private static readonly long serialVersionUID = -8343910153355041693L;

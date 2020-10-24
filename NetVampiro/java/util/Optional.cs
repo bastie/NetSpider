@@ -1,4 +1,4 @@
-/* C# reimpl 
+/* 
  * Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.
@@ -13,6 +13,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * Copyright © 2020 Sebastian Ritter
  */
 
 using System;
@@ -21,8 +23,10 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util {
 
+    [Serializable]
     public sealed class Optional<T> : java.io.Serializable {
 
+        [NonSerialized]
         private static readonly Optional<T> EMPTY = new Optional<T>();
 
         private readonly T value;
@@ -61,6 +65,10 @@ namespace biz.ritter.javapi.util {
             return value != null ? value : other;
         }
 
+        public T orElseThrow() {
+            return value != null ? value : throw new java.util.NoSuchElementException("Optional value not present");
+        }
+
         public bool isPresent() {
             return value != null;
         }
@@ -83,8 +91,6 @@ namespace biz.ritter.javapi.util {
                 return this.value.Equals(other.value);
             }
         }
-
-
         
         public override int GetHashCode() {
             return value == null ? 0 : value.GetHashCode();

@@ -20,6 +20,9 @@
       <RepositoryUrl>https://github.com/bastie/NetSpider.git</RepositoryUrl>
       <PackageSummary>Java API for .net</PackageSummary>
       <copyright>Copyright 2011-2020 Sebastian Ritter</copyright>
+
+
+    
     </PropertyGroup>
   
   
@@ -32,6 +35,10 @@
     <UseWindowsForms>true</UseWindowsForms>
     
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- In result of serial id, deactivate 
+      - unsued values CS0414
+    -->
+    <NoWarn>0414</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>

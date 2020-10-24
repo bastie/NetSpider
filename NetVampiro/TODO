@@ -126,6 +126,7 @@ To Implement:
      - java.net.InetAddress
      - java.net.CookiePolicy.ACCEPT_ORIGINAL_SERVER
      - java.net.HttpCookie
+     - java.util.Optional    => java.util.function.* needed
    + content changed
      - java.util.Observable - deprecated since Java9
      - java.util.Observer   - deprecated since Java9
