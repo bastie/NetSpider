@@ -14,13 +14,10 @@
  *  Copyright © 2020 Sebastian Ritter
  */
 using System;
+using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.lang.refj
-{
-    public sealed class Cleaner {
-        public interface Cleanable
-        {
-            void clean();
-        }
-    }
+namespace biz.ritter.javapix.script {
+
+    public interface Bindings{}
 }
+

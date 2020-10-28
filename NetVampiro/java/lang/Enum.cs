@@ -23,11 +23,32 @@ using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util {
     [Serializable]
-  public abstract class Enum<E> : java.io.Serializable, java.lang.Comparable<E>, java.lang.constant.Constable {
+  public abstract class Enum<E> : java.io.Serializable, java.lang.Comparable<E>, java.lang.constant.Constable, java.lang.Cloneable {
+
+        private readonly String enumName;
+        private readonly int enumOrdinal;
+  
+        public Enum (String name, int ordinal) {
+            this.enumName = name;
+            this.enumOrdinal = ordinal;
+        }
+
+        public String name() {
+            return this.enumName;
+        }
+        public int ordinal() {
+            return this.enumOrdinal;
+        }
 
         public abstract int compareTo (E other);
         public abstract java.util.Optional<java.lang.constant.ConstantDesc> describeConstable();
 
+        public Object clone() {
+            throw new java.lang.CloneNotSupportedException ("Enums never be clonable.");
+        }
+        protected new Enum<E> MemberwiseClone () {
+            return (Enum<E>) this.clone(); // throws ever ever an Exception, see Javadoc
+        }
   }
 
 }

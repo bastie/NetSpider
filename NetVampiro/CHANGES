@@ -20,6 +20,8 @@
   - java.util.Optional
   - java.lang.constant.Constable
   - java.lang.Enum
+  - java.util.Comparator do not declare equals in extension to java.lang Object
+  - some skeleton classes in javax.script for compile a java ported programm 
 * VampireApi 0.10.0
   - outsource 3rd party types
   - some litte Java 15 extensions from release notes

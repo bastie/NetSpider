@@ -54,21 +54,9 @@ namespace biz.ritter.javapi.util
          */
         int compare(T object1, T object2);
 
-        /**
-         * Compares this {@code Comparator} with the specified {@code Object} and indicates whether they
-         * are equal. In order to be equal, {@code object} must represent the same object
-         * as this instance using a class-specific comparison.
-         * <p>
-         * A {@code Comparator} never needs to override this method, but may choose so for
-         * performance reasons.
-         * 
-         * @param object
-         *            the {@code Object} to compare with this comparator.
-         * @return boolean {@code true} if specified {@code Object} is the same as this
-         *         {@code Object}, and {@code false} otherwise.
-         * @see Object#hashCode
-         * @see Object#equals
+        /*
+         * In result of Javadoc: "Note that it is always safe not to override Object.equals(Object)." 
          */
-        bool equals(Object obj);
+        //bool equals(Object obj);
     }
 }

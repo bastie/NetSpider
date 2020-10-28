@@ -128,6 +128,7 @@ To Implement:
      - java.util.Optional    => java.util.function.* needed
      - java.lang.constant.ConstantDesc
      - java.lang.Enum
+     - java.io.ObjectInputFilter.Config.createFilter 
    + content changed
      - java.util.Observable - deprecated since Java9
      - java.util.Observer   - deprecated since Java9
@@ -136,6 +137,8 @@ To Implement:
 
 Some projects needed:
 - Project to migrate GPL2 test as external project
+ - build patches from JDK test to parallel Test project under GPL2
+ - with updates creates temp patch release and check for difference
 - CleanVampire projects  (the implementations with no deprecations for clean programmers)
 - VampireApi project (containts all implementationsthat works at full moon in Java 16, includes also CleanVampire for default programmers)
 - SunVampire projects (the sun is down and this classes are missing in Java 16 - includes also VampireApi for legacy programmers)
@@ -161,3 +164,4 @@ Not implemented:
 
 String formatting:
 String.format ("Optional[%s]",value); ==> String.Format("Optional[{0}]", value);
+

@@ -31,6 +31,11 @@ namespace biz.ritter.javapi.lang
         /**
          * Constants for runtime permissions used in this package.
          */
+        ///<summary>new with Java9 for ObjectInputFilter</summary>
+        internal static readonly RuntimePermission permissionToSerialFilter = new RuntimePermission(
+                "serialFilter"); //$NON-NLS-1$
+
+         
         internal static readonly RuntimePermission permissionToSetSecurityManager = new RuntimePermission(
                 "setSecurityManager"); //$NON-NLS-1$
 

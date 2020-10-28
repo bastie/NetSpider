@@ -14,13 +14,15 @@
  *  Copyright © 2020 Sebastian Ritter
  */
 using System;
+using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.lang.refj
-{
-    public sealed class Cleaner {
-        public interface Cleanable
-        {
-            void clean();
-        }
+namespace biz.ritter.javapi.io {
+
+    ///
+    /// <summary>abstract package private class to abstract the file system. Needed? I don't no!</summary>
+    ///
+    internal class FileSystem {
+
     }
 }
+
