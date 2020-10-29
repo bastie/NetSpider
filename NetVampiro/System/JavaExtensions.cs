@@ -22,7 +22,7 @@ using java = biz.ritter.javapi;
 //namespace biz.ritter.javapi.dotnet
 namespace System
 {
-    public static class JavaExtensions
+    public static class JavaLangString
     {
         #region java.lang.String
 
@@ -237,6 +237,9 @@ namespace System
             return 0 == str.Length;
         }
         #endregion
+    }
+    public static class JavaExtensions {
+
         #region java.lang.StringBuilder
         public static StringBuilder deleteCharAt(this StringBuilder sb, int index)
         {
@@ -410,6 +413,9 @@ namespace System
             }
         }
         #endregion
+    }
+
+    public static class JavaUtilDate {
 
         #region java.util.Date
         /// <summary>
@@ -424,6 +430,41 @@ namespace System
             return milliseconds;
         }
 
+        #endregion
+
+    }
+
+    public static class JavaUtilRandom2SystemRandom {
+
+        /// <summary>
+        /// Extension method to use System.Random as same way as java.util.Random 
+        /// </summary>
+        public static int nextInt(this System.Random dotnetRandom) {
+            return dotnetRandom.Next();
+        }
+    }
+
+    public static class JavaPrimitivesAndGenTypes {
+
+        #region java.lang.Record
+        #endregion
+
+        #region java.lang.Enum
+        /// for later
+        #endregion
+
+        #region primitives
+        public static System.Boolean valueOf (this System.Boolean dotnetBoolean, String value) {
+            // java all lower case to dotnet first char upper case 
+            value = value.Equals("true") ? "True" : value.Equals ("false") ? "False" : value; 
+            return System.Boolean.Parse(value);
+        }
+        #endregion
+
+        #region Type
+        public static String getName (this System.Type dotnetType) {
+            return dotnetType.Name;
+        }
         #endregion
     }
 }

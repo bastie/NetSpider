@@ -131,7 +131,8 @@ to
    
 
 
-
+### regular expressions
+   * take a look at https://www.generacodice.com/en/articolo/484294/What-is-the-C%23-equivalent-of-java.util.regex 
     
 ## Development hacks
 
