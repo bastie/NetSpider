@@ -165,3 +165,69 @@ Not implemented:
 String formatting:
 String.format ("Optional[%s]",value); ==> String.Format("Optional[{0}]", value);
 
+
+
+Sleep 2.1: 
+java.lang.Class.instanceof, 
+java.lang.Math.asin atan atan2 log pow round tan toRadians toDegrees exp
+java.lang.reflect.Constructor, 
+java.lang.reflect.InvocationHandler
+java.lang.reflect.Proxy
+java.lang.reflect.Method.setAccessible
+java.security.DigestOutputStream
+java.io.File.toURL
+java.io.File.listRoots
+java.io.File.setReadOnly
+java.io.File.setLastModified
+java.io.File.mkdirs
+java.io.File.isHidden
+java.io.File.getAbsoluteFile
+java.io.File.isAbsolute
+java.io.File.getParentFile
+java.lang.Thread.join
+java.lang.isJavaIdentifierPart
+java.lang.Process.getInputStream
+java.lang.Process.getOutputStream
+java.lang.Process.exitValue
+java.net.Socket.getInetAddress().getHostAddress()
+java.net.Socket.connect
+java.net.Socket.bind
+java.net.Socket.new()
+java.net.ServerSocket.setSoTimeout
+java.net.ServerSocket(x,y,z)
+java.net.Socket.setSoLinger
+java.lang.Long.decode
+java.util.regex.Pattern.compile
+java.util.Array.set
+java.util.Hashtable.new(int)
+java.security.DigestOutputStream
+java.security.DigestInputStream
+javax.script.ScriptException
+javax.script.ScriptEngine.FILENAME
+javax.script.ScriptEngine.ARGV
+javax.script.ScriptContext.getBindings()
+javax.script.ScriptContext.ENGINE_SCOPE
+
+extension method for java.lang-number types Double.parseDouble() => Double.Parse()
+extension methods for Type like Class, 
+Type.isInterface
+Type.getComponentType
+Type.getName
+Type.isArray
+Type.isPrimitive
+Type.isInstance
+Type.getInterfaces
+Type.getField
+Type.getDeclaredField
+Type.newInstance
+Type.forName
+Type.isAssignableFrom
+Type.getClassLoader
+bool.valueOf
+Object.getType
+Random.nextDouble
+Random.nextInt
+Math
+Object.notifyAll
+Object.wait
+System.currentTimeMillis
