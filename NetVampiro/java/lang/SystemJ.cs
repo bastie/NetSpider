@@ -180,6 +180,7 @@ namespace biz.ritter.javapi.lang
                 prop.Add("java.util.logging.config.file", null);
                 prop.Add("java.util.logging.manager", null);
 				// IO properties
+                prop.Add("java.nio.file.spi.DefaultFileSystemProvider","dotnet.nio.file.spi.FileSystemProvider"); // see https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/nio/file/FileSystems.html 
 				prop.Add("java.io.tmpdir", System.IO.Path.GetTempPath()); //using in logging FileHandler
                 //Security properties - see java.security package
                 prop.Add("java.security.properties", null);

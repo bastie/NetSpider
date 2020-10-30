@@ -16,13 +16,18 @@
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.io {
+namespace biz.ritter.javapi.dotnet.nio.fs
+{
+    internal sealed class DefaultPath : java.nio.file.Path {
 
-    ///
-    /// <summary>abstract package private class to abstract the file system. Needed? I don't no!</summary>
-    ///
-    internal class FileSystem {
+        private readonly java.net.URI uri;
 
+       public DefaultPath (java.net.URI defaultURI) {
+          this.uri = defaultURI;
+       }
+
+       public bool isAbsolute () {
+           return uri.isAbsolute();
+       }
     }
 }
-

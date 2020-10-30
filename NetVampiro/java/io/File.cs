@@ -329,5 +329,10 @@ namespace biz.ritter.javapi.io
 				else throw new java.io.IOException(e.Message);
 			}
 		}
+
+        public virtual bool isAbsolute() {
+            //return Paths.get(this.toString()) // https://docs.oracle.com/javase/tutorial/essential/io/pathOps.html => The Paths.get method is shorthand for the following code FileSystems.getDefault().getPath
+            return java.nio.file.FileSystems.getDefault().getPath(this.toString()).isAbsolute();
+        }
     }
 }

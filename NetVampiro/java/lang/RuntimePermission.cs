@@ -28,12 +28,16 @@ namespace biz.ritter.javapi.lang
 
         private static readonly long serialVersionUID = 7399184964622342223L;
 
+        internal static readonly RuntimePermission permissionToFileSystemProvider = new RuntimePermission(
+                "fileSystemProvider");
+        
+
         /**
          * Constants for runtime permissions used in this package.
          */
         ///<summary>new with Java9 for ObjectInputFilter</summary>
         internal static readonly RuntimePermission permissionToSerialFilter = new RuntimePermission(
-                "serialFilter"); //$NON-NLS-1$
+                "serialFilter"); 
 
          
         internal static readonly RuntimePermission permissionToSetSecurityManager = new RuntimePermission(

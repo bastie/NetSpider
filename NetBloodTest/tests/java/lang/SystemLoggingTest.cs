@@ -1,10 +1,11 @@
 using NUnit.Framework;
 
+using System;
 using java = biz.ritter.javapi;
 
-namespace vampire.test.lang
+namespace vampire.test.io
 {
-    public class UnitTest_SystemLogging
+    public class UnitTest_IoFile
     {
         
         [SetUp]
@@ -12,20 +13,11 @@ namespace vampire.test.lang
         }
     
         [Test]
-        public void Test_SetSecurityManager()
+        public void Test_FileAbsolute()
         {
+          java.io.File absolute = new java.io.File ("/VampireApi/extends/JavaApi.nice");
+          Assert.True (absolute.isAbsolute(),"File "+absolute.toString()+" need to be absolute File");
         }
 
-        [Test]
-        public void Test_Loglevel_Value() {
-          /// see Javadoc for Enum System.Logger.Level
-          Assert.AreEqual(java.util.logging.Level.ALL.intValue(), (int) java.lang.SystemJ.Logger.Level.ALL);
-          Assert.AreEqual(java.util.logging.Level.FINER.intValue(), (int) java.lang.SystemJ.Logger.Level.TRACE);
-          Assert.AreEqual(java.util.logging.Level.FINE.intValue(), (int) java.lang.SystemJ.Logger.Level.DEBUG);
-          Assert.AreEqual(java.util.logging.Level.INFO.intValue(), (int) java.lang.SystemJ.Logger.Level.INFO);
-          Assert.AreEqual(java.util.logging.Level.WARNING.intValue(), (int) java.lang.SystemJ.Logger.Level.WARNING);
-          Assert.AreEqual(java.util.logging.Level.SEVERE.intValue(), (int) java.lang.SystemJ.Logger.Level.ERROR);
-          Assert.AreEqual(java.util.logging.Level.OFF.intValue(), (int) java.lang.SystemJ.Logger.Level.OFF);
-        } 
     }
 }

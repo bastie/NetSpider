@@ -20,7 +20,7 @@ using java = biz.ritter.javapi;
 namespace biz.ritter.javapi.net
 {
     [Serializable]
-    public class URI : java.io.Serializable // java.lang.Comparable<URI>
+    public sealed class URI : java.io.Serializable // java.lang.Comparable<URI>
     {
 
         internal const String unreserved = "_-!.~\'()*"; //$NON-NLS-1$
@@ -352,5 +352,16 @@ namespace biz.ritter.javapi.net
             return new URL(ToString());
         }
 
+        // see https://en.wikipedia.org/wiki/List_of_URI_schemes
+        public String getScheme () => this.delegateInstance.Scheme;
+        public String getHost () => this.delegateInstance.Host;
+        public String getPath() => this.delegateInstance.AbsolutePath;
+        public String getQuery() => this.delegateInstance.Query;
+        public String getFragment() => this.delegateInstance.Fragment;
+        public String getUserInfo() => this.delegateInstance.UserInfo;
+        public int getPort() => this.delegateInstance.Port;
+
+        public bool isAbsolute() => this.delegateInstance.IsAbsoluteUri;
+        
     }
 }
