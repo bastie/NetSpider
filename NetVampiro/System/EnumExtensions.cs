@@ -16,12 +16,10 @@
 using System;
 using java = biz.ritter.javapi;
 
-namespace vampire.extension
-{
 ///<summary>
 /// Entension class for enums
 ///</summary>
-namespace biz.ritter.javapi.lang.SystemJ.Logger {
+namespace System {
         public static class LevelExtension {
         
 	      public static String getName(this java.lang.SystemJ.Logger.Level self) {
@@ -76,4 +74,3 @@ namespace biz.ritter.javapi.lang.SystemJ.Logger {
         }
       
     }
-}
