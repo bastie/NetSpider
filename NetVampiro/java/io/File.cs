@@ -336,6 +336,41 @@ namespace biz.ritter.javapi.io
         }
 
 
+
+        [Obsolete]
+        public virtual java.net.URL toURL() {
+            String name = getAbsoluteName();
+            if (!name.startsWith("/")) {
+                // start with sep.
+                return new java.net.URL(
+                        "file", "", -1, new java.lang.StringBuilder(name.length() + 1) 
+                                .append('/').append(name).toString(), null);
+            } else if (name.startsWith("//")) {
+                return new java.net.URL("file:" + name); 
+            }
+            return new java.net.URL("file", "", -1, name, null);
+
+        }
+
+        public File getAbsoluteFile() {
+            return new File(this.getAbsolutePath());
+        }
+
+        private String getAbsoluteName() {
+            File f = getAbsoluteFile();
+            String name = f.getPath();
+
+            if (f.isDirectory() && name.charAt(name.length() - 1) != separatorChar) {
+                // Directories must end with a slash
+                name = new java.lang.StringBuilder(name.length() + 1).append(name)
+                        .append('/').toString();
+            }
+            if (separatorChar != '/') { // Must convert slashes.
+                name = name.replace(separatorChar, '/');
+            }
+            return name;
+        }
+
         public bool isHidden () => this.getFileAttributes().HasFlag(System.IO.FileAttributes.Hidden);
 
         internal System.IO.FileAttributes getFileAttributes () => System.IO.File.GetAttributes(this.getAbsolutePath());

@@ -175,12 +175,10 @@ java.lang.reflect.InvocationHandler
 java.lang.reflect.Proxy
 java.lang.reflect.Method.setAccessible
 java.security.DigestOutputStream
-java.io.File.toURL
 java.io.File.listRoots
 java.io.File.setReadOnly
 java.io.File.setLastModified
 java.io.File.mkdirs
-java.io.File.getAbsoluteFile
 java.io.File.getParentFile
 java.lang.Thread.join
 java.lang.isJavaIdentifierPart

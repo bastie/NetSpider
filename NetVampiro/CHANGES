@@ -1,6 +1,8 @@
 * VampireApi 0.11.0
-  - java.io.File.isAbsolute
-  - java.io.File.isHidden
+  - java.io.File.isAbsolute()
+  - java.io.File.isHidden()
+  - java.io.File.getAbsoluteFile()
+  - java.io.File.toURL()
   - java.lang.System.Logger.Level
   - java.lang.reflect.UndeclaredThrowableException
   - java.lang.reflect.GenericSignatureFormatException
