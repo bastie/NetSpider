@@ -180,7 +180,6 @@ java.io.File.listRoots
 java.io.File.setReadOnly
 java.io.File.setLastModified
 java.io.File.mkdirs
-java.io.File.isHidden
 java.io.File.getAbsoluteFile
 java.io.File.getParentFile
 java.lang.Thread.join

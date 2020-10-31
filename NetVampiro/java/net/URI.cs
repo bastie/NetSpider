@@ -360,7 +360,6 @@ namespace biz.ritter.javapi.net
         public String getFragment() => this.delegateInstance.Fragment;
         public String getUserInfo() => this.delegateInstance.UserInfo;
         public int getPort() => this.delegateInstance.Port;
-
         public bool isAbsolute() => this.delegateInstance.IsAbsoluteUri;
         
     }

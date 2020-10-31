@@ -334,5 +334,11 @@ namespace biz.ritter.javapi.io
             //return Paths.get(this.toString()) // https://docs.oracle.com/javase/tutorial/essential/io/pathOps.html => The Paths.get method is shorthand for the following code FileSystems.getDefault().getPath
             return java.nio.file.FileSystems.getDefault().getPath(this.toString()).isAbsolute();
         }
+
+
+        public bool isHidden () => this.getFileAttributes().HasFlag(System.IO.FileAttributes.Hidden);
+
+        internal System.IO.FileAttributes getFileAttributes () => System.IO.File.GetAttributes(this.getAbsolutePath());
+
     }
 }

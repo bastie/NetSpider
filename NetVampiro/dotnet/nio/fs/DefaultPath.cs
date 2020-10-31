@@ -26,8 +26,7 @@ namespace biz.ritter.javapi.dotnet.nio.fs
           this.uri = defaultURI;
        }
 
-       public bool isAbsolute () {
-           return uri.isAbsolute();
-       }
+       public bool isAbsolute () => uri.isAbsolute();
+
     }
 }
