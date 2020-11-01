@@ -11,13 +11,9 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
- *  Copyright © 2011-2013 Sebastian Ritter
+ *  Copyright © 2011-2020 Sebastian Ritter
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.io
@@ -35,7 +31,7 @@ namespace biz.ritter.javapi.io
         {
             try
             {
-                delegateInstance = new System.IO.FileStream(name, System.IO.FileMode.Create, System.IO.FileAccess.Write);
+                delegateInstance = System.IO.File.OpenWrite(name);
             }
             catch (UnauthorizedAccessException toThrow){
                 throw new java.lang.SecurityException(toThrow.Message);
@@ -56,7 +52,7 @@ namespace biz.ritter.javapi.io
         /// <param name="append"></param>
         public FileOutputStream(string name, bool append) : this (name)
         {
-            this.delegateInstance.Position = this.delegateInstance.Length;
+            if (append) this.delegateInstance.Position = this.delegateInstance.Length;
         }
 
         public override void write(int value)
@@ -70,12 +66,25 @@ namespace biz.ritter.javapi.io
                 throw new java.io.IOException(toThrow.Message);
             }
         }
+        public override void write(byte[] value, int beginOffset, int length) // throws IOException; 
+        {
+            try {
+                this.delegateInstance.Write(value,beginOffset,length);
+            }
+            catch (SystemException toThrow)
+            {
+                throw new java.io.IOException(toThrow.Message);
+            }
+        }
+
         public override void flush()
         {
             this.delegateInstance.Flush();
         }
         public override void close()
         {
+            this.flush();
+            this.delegateInstance.Dispose();
             this.delegateInstance.Close();
         }
 

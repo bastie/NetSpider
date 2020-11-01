@@ -238,7 +238,7 @@ namespace System
         }
         #endregion
     }
-    public static class JavaExtensions {
+    public static class JavaLangStringBuilder {
 
         #region java.lang.StringBuilder
         public static StringBuilder deleteCharAt(this StringBuilder sb, int index)
@@ -276,6 +276,10 @@ namespace System
             return e.Message;
         }
         #endregion
+    }
+    public static class JavaLangObject {
+
+
         #region java.lang.Object
         public static void wait(this Object o, long milliseconds)
         {
@@ -377,6 +381,8 @@ namespace System
 
             return clazz;
         }
+
+
         public static System.Object clone(this System.Object t)
         {
             throw new java.lang.CloneNotSupportedException();
@@ -391,6 +397,9 @@ namespace System
             return t.getClass().getResource(name);
         }
         #endregion
+    }
+    public static class JavaUtilCalendar {
+
         #region java.util.Calendar
         /// <summary>
         /// Convert enumeration value to int valie based on 
@@ -467,4 +476,5 @@ namespace System
         }
         #endregion
     }
+
 }
