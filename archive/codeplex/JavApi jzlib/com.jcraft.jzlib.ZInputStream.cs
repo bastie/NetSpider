@@ -1,4 +1,4 @@
-/* -*-mode:java; c-basic-offset:2; indent-tabs-mode:nil -*- */
+
 /*
 Copyright (c) 2001 Lapo Luchini.
 
