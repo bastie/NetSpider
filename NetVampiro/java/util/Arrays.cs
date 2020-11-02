@@ -768,7 +768,7 @@ namespace biz.ritter.javapi.util
          *            the array.
          * @return a {@code List} of the elements of the specified array.
          */
-        public static List<T> asList<T>(T[] array)
+        public static List<T> asList<T>(params T[] array)
         {
             return new ArrayList<T>(array);
         }

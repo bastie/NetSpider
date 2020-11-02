@@ -363,18 +363,23 @@ namespace biz.ritter.javapi.util
             public DefaultEntry(K newKey, V newValue)
             {
                 this.key = newKey;
-                this.setValue(newValue);
+                this.setReallyValue(newValue);
             }
-            public V getValue()
+            public virtual V getValue()
             {
                 return this.value;
             }
-            public K getKey()
+            public virtual K getKey()
             {
                 return this.key;
             }
-            public V setValue(V newValue)
+            public virtual V setValue(V newValue)
             {
+                return this.setReallyValue(newValue);
+            }
+
+            // with Java 9 java.util.Map.entry() method returns an unmodifiable entry an so I need a helper method for my constructor 
+            internal virtual V setReallyValue (V newValue) {
                 V oldValue = this.value;
                 this.value = newValue;
                 return oldValue;

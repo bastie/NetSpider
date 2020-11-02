@@ -4,6 +4,7 @@
   - java.io.File.getAbsoluteFile()
   - java.io.File.toURL()
   - java.lang.System.Logger.Level
+  - java.lang.Character.isAlphabetic
   - java.lang.reflect.UndeclaredThrowableException
   - java.lang.reflect.GenericSignatureFormatException
   - java.net.ContentHandlerFactory
@@ -21,10 +22,14 @@
   - java.lang.annotation.AnnotationTypeMismatchException
   - java.lang.annotation.IncompleteAnnotationException
   - java.lang.annotation.AnnotationFormatError
-  - java.util.Optional
+  - java.util.Optional in parts
   - java.lang.constant.Constable
   - java.lang.Enum
+  - java.util.Arrays.asList bugfix varargs was missing
+  - java.util.Collections.singletonList
+  - java.util.Map.entry
   - java.util.Comparator do not declare equals in extension to java.lang Object
+  - java.util.Objects
   - some skeleton classes in javax.script for compile a java ported programm 
 * VampireApi 0.10.0
   - outsource 3rd party types

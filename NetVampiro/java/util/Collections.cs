@@ -540,6 +540,46 @@ namespace biz.ritter.javapi.util
         }
 
         /**
+        * Returns a list containing the specified element. The list cannot be
+        * modified. The list is serializable.
+        * 
+        * @param object
+        *            the element.
+        * @return a list containing the element.
+        */
+        public static List<E> singletonList<E>(E obj) {
+            return new SingletonList<E>(obj);
+        }
+
+    [Serializable]
+    internal sealed class SingletonList<E> : AbstractList<E>, java.io.Serializable {
+        private static readonly long serialVersionUID = 3093736618740652951L;
+
+        readonly E element;
+
+        internal SingletonList(E obj) {
+            element = obj;
+        }
+
+        public override bool contains(Object obj) {
+            return element == null ? obj == null : element.equals(obj);
+        }
+
+        public override E get(int location) {
+            if (location == 0) {
+                return element;
+            }
+            throw new java.lang.IndexOutOfBoundsException();
+        }
+
+        public override int size() {
+            return 1;
+        }
+    }
+
+
+
+        /**
          * Returns a {@link Comparator} that reverses the order of the
          * {@code Comparator} passed. If the {@code Comparator} passed is
          * {@code null}, then this method is equivalent to {@link #reverseOrder()}.

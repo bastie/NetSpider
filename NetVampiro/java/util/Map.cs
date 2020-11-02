@@ -11,9 +11,11 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
+ *  Copyright © 2020 Sebastian Ritter
  */
 
 using System;
+using java = biz.ritter.javapi;
 
 namespace biz.ritter.javapi.util
 {
@@ -203,8 +205,17 @@ namespace biz.ritter.javapi.util
          * @return a collection of the values contained in this map.
          */
         Collection<V> values();
+
+        static MapNS.Entry<K,V> entry(K key, V value) { //Java 9
+            // javadoc says: null not allowed for key or value
+            if (null == key || null == value) throw new java.lang.NullPointerException();
+            return new java.util.UnmodifiableMapEntry<K,V> (new java.util.MapNS.DefaultEntry<K,V>(key,value));
+        }
+
     }
     
+    // this namespace is a helper in result of it is illegal use same name for differents like namespace and type
+    // CHECKIT: better ways detecting
     namespace MapNS {
         /**
          * {@code Map.Entry} is a key/value mapping contained in a {@code Map}.

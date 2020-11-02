@@ -1121,6 +1121,11 @@ namespace biz.ritter.javapi.lang
             }
             return UNASSIGNED;
         }
+
+        public static bool isAlphabetic (int codePoint) {
+            return System.Char.IsLetter((char) codePoint);
+        }
+
         private static readonly int[] typeValuesCache = new int[] {
     	15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 
     	15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 
