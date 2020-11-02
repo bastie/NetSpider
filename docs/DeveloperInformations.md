@@ -102,8 +102,12 @@ if you override a method with return value, the visible of return type need to b
 do not call variable name same as method name
 switch default need a break
 java.lang.Boolean.FALSE (false) != System.Boolean.FalseString - add a .ToLower()
+@Override ==> do not use override keyword for interface methods
+visibility are littlebit different and you need more internal and public 
 
-genric classes needed types 
+generic classes needed types 
+
+Java Streams to C# LINQ see https://blog.lahteenmaki.net/java-streams-vs-c-linq-vs-java6.html 
 
 
 the class problems...

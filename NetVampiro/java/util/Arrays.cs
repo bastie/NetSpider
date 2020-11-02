@@ -11,6 +11,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  *  
+ *  Copyright © 2020 Sebastian Ritter
  */
 
 using System;
@@ -1465,5 +1466,55 @@ namespace biz.ritter.javapi.util
             }
             return result;
         }
+
+        public static byte [] copyOfRange (byte[] source, int from, int to){
+            return Arrays<byte>.copyOfRangeGeneric(source,from,to);
+        }
+
+        public static short [] copyOfRange (short[] source, int from, int to){
+            return Arrays<short>.copyOfRangeGeneric(source,from,to);
+        }
+
+        public static int [] copyOfRange (int[] source, int from, int to){
+            return Arrays<int>.copyOfRangeGeneric(source,from,to);
+        }
+        public static long [] copyOfRange (long[] source, int from, int to){
+            return Arrays<long>.copyOfRangeGeneric(source,from,to);
+        }
+
+        public static char [] copyOfRange (char[] source, int from, int to){
+            return Arrays<char>.copyOfRangeGeneric(source,from,to);
+        }
+        public static float [] copyOfRange (float[] source, int from, int to){
+            return Arrays<float>.copyOfRangeGeneric(source,from,to);
+        }
+
+        public static double [] copyOfRange (double[] source, int from, int to){
+            return Arrays<double>.copyOfRangeGeneric(source,from,to);
+        }
+
+        public static T[] copyOfRange (T[] source, int from, int to) {
+            if (from < 0 || to > source.Length) throw new java.lang.ArrayIndexOutOfBoundsException();
+            if (from > to) throw new java.lang.IllegalArgumentException();
+            if (null == source) throw new java.lang.NullPointerException();
+            if (from == to) return new T [0];
+            T [] result = new T[to-from];
+            java.lang.SystemJ.arraycopy(source,from,result,0,result.Length);
+            return result;
+        }
+        public static bool [] copyOfRange (bool[] source, int from, int to){
+            return Arrays<bool>.copyOfRangeGeneric(source,from,to);
+        }
+
+        internal static T[] copyOfRangeGeneric (T[] source, int from, int to) {
+            if (from < 0 || to > source.Length) throw new java.lang.ArrayIndexOutOfBoundsException();
+            if (from > to) throw new java.lang.IllegalArgumentException();
+            if (null == source) throw new java.lang.NullPointerException();
+            if (from == to) return new T [0];
+            T [] result = new T[to-from];
+            java.lang.SystemJ.arraycopy(source,from,result,0,result.Length);
+            return result;
+        }
+
     }
 }

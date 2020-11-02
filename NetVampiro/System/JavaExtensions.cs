@@ -158,6 +158,7 @@ namespace System
         {
             return new java.lang.StringJ(str).getBytes(charsetName);
         }
+        /// <summary>optimized for UTF-8 String (default in Java)</summary>
         public static char charAt(this String str, int index)
         {
             return str[index];

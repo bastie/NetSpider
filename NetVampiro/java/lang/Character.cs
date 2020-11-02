@@ -10,6 +10,8 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
+ * 
+ *  Copyright © 2020 Sebastian Ritter
  */
 using System;
 using java = biz.ritter.javapi;
@@ -68,7 +70,10 @@ namespace biz.ritter.javapi.lang
                 return false;
             }
             return System.Char.IsUpper(c);
-            //return getType(c) == UPPERCASE_LETTER;
+        }
+
+        public static bool isLowerCase (char c) {
+            return System.Char.IsLower(c);
         }
 
         private readonly char value;
