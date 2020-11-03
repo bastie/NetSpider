@@ -43,7 +43,7 @@ namespace biz.ritter.javapi.util
      * {@code UnsupportedOperationException} if the underlying collection doesn't
      * support that method.
      */
-    public interface Collection<E> : java.lang.Iterable<E> {//, IEnumerator<E> {
+    public interface Collection<E> : java.lang.Iterable<E> {
 
         /**
          * Attempts to add {@code object} to the contents of this

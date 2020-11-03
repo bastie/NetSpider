@@ -19,6 +19,7 @@ CHECK:
  - why is java.math.Primatily not as internal declared?
  
 To Implement:
+ - HashSet does not implement to using in foreach loops
  - java.nio.channel (java.io.FileOutputStream.getChannel())
  - java.text.MessageFormat
  - FileLock (see http://social.msdn.microsoft.com/Forums/en-US/csharpgeneral/thread/a5300fc5-126c-4e33-8ae6-13376031e9fe/)
