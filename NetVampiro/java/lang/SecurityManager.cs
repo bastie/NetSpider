@@ -62,5 +62,10 @@ namespace biz.ritter.javapi.lang
           this.checkPermission(new java.util.PropertyPermission("*","read,write"));
         }
 
+        public void checkRead (String file) {
+            if (null == file) throw new java.lang.NullPointerException();
+            this.checkPermission(new java.io.FilePermission(file,"read"));
+        }
+
     }
 }

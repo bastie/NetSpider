@@ -26,5 +26,6 @@ namespace biz.ritter.javapi.nio.file
         }
 
         bool isAbsolute();
+
     }
 }

@@ -43,6 +43,14 @@ namespace biz.ritter.javapi.util {
             }
             return result;
         }
+
+        public static bool isNull(Object obj) { // Java8
+            return null == obj;
+        }
+        public static bool nonNull(Object obj) { // Java8
+            return null != obj;
+        }
+
     }
 
 }

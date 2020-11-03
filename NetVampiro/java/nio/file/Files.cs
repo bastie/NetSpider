@@ -16,22 +16,26 @@
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.dotnet.nio.fs
-{
-    internal sealed class DefaultPath : java.nio.file.Path {
+namespace biz.ritter.javapi.nio.file {
 
-        private readonly java.net.URI uri;
+    ///
+    /// 
+    ///
+    public sealed class Files {
 
-       public DefaultPath (java.net.URI defaultURI) {
-          this.uri = defaultURI;
-       }
-
-       public bool isAbsolute () => uri.isAbsolute();
-
-
-       public String toString() {
-           return this.uri.toURL().getFile();
-       }
-
+        public static byte [] readAllBytes (Path path) {
+            java.lang.SystemJ.getSecurityManager().checkRead(path.toString());
+            try {
+                byte [] all = System.IO.File.ReadAllBytes(path.toString());
+                return all;
+            }
+            catch (UnauthorizedAccessException securityEx) {
+                throw new java.lang.SecurityException (securityEx.Message);
+            }
+            catch (Exception ex){
+                throw new java.io.IOException (ex.Message);
+            }
+        }
     }
 }
+
