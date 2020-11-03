@@ -59,57 +59,63 @@ for constants. `readonly` constants can set in constructors.
 Take a look at solutions:
  * reimplementation like Java [EnumCollections](https://github.com/matteckert/EnumCollections) 
  * use [extension methods](https://weyprecht.de/2019/10/16/enums-in-csharp-and-java/)
-    
+
+
+### VampireApi
+ * in ==> inJ
+ * out ==> outJ
+ * package java.lang.ref => java.lang.refj
+ * System class ==> SystemJ
+ * add at beginning using System; and using java = biz.ritter.javapi;
+ * extends java.io.Serializable ==> : java.io.Serializable and (!!!) using System and [Serializable] for type and all(!) subtypes
+ * Variable name operator ==> operatorJ
+ * Variable name string ==> stringJ
+ * Variable name params ==> paramsJ
+ * Variable name object ==> objectJ
+ * java.util.Map<?,?>.Entry<?,?> ==> java.util.MapNS.Entry<Object,Object>
+ 
+ 
 ### Unsorted informations
 Keyword replacing:
-in ==> inJ
-out ==> outJ
-package => namespace
-package java.lang.ref => java.lang.refj
-import package.package.*; => package.package;
-extends ==> :
-implements ==> : or ,
-static block ==> static constructor
-boolean ==> bool
-final class ==> sealed class 
-final method ==> sealed method 
-final var ==> readonly var    or sometime const
-method throws signature ==> comment out or remove
-System class ==> SystemJ
-type name [] ==> type [] name
-namespace is a block not a statement
-add at beginning using System; and using java = biz.ritter.javapi;
-important: you need to using System for basic types like String
-namespace after using
-extends java.io.Serializable ==> : java.io.Serializable and (!!!) using System and [Serializable] for type and all(!) subtypes
-transient ==> using System and [NonSerializable]
-instanceof ==> is
-synchronized method ==> lock(this) - maybe [MethodImpl(MethodImplOptions.Synchronized)]
-synchronized block with type ==> replace with lock
-synchronized block ==> create readonly object and replace synchronized with lock (object)
-Variable name operator ==> operatorJ
-Variable name string ==> stringJ
-Variable name params ==> paramsJ
-Variable name object ==> objectJ
-array.length ==> array.Length
-java.util.Map<?,?>.Entry<?,?> ==> java.util.MapNS.Entry<Object,Object>
-base class constructor call super (xyz) is declared with : base (xyz)
-non final methods in non final class needed to be virtual
-methods are "final" by default, need to be virtual or abstract if not
-usings are on "package"-stage, never import a type with using
-if you override a method same visiblity are important
-if you override a method with return value, the visible of return type need to be same or more
-do not call variable name same as method name
-switch default need a break
-java.lang.Boolean.FALSE (false) != System.Boolean.FalseString - add a .ToLower()
-@Override ==> do not use override keyword for interface methods
-visibility are littlebit different and you need more internal and public 
+ * import package.package.*; => using package.package;
+ * usings are on "package"-stage, never import a type with using
+ * package => namespace
+ * namespace is a block not a statement
+ * namespace after using
+ * extends ==> :
+ * implements ==> : or ,
+ * static block ==> static constructor
+ * boolean ==> bool
+ * final class ==> sealed class 
+ * final method ==> sealed method 
+ * final var ==> readonly var    or sometime const
+ * method throws signature ==> comment out or remove
+ * type name [] ==> type [] name
+ * important: you need to using System for basic types like String
+ * java.io.Serializable as marker Interface ist replacing from [Serializable] for all (sub)types
+ * transient ==> using System and [NonSerializable]
+ * instanceof ==> is
+ * synchronized method ==> lock(this) - maybe [MethodImpl(MethodImplOptions.Synchronized)]
+ * synchronized block with type ==> replace with lock
+ * synchronized block without type ==> create readonly object and replace synchronized with lock (object)
+ * array.length ==> array.Length
+ * base class constructor call super (xyz) is declared with : base (xyz)
+ * non final methods in non final class needed to be virtual
+ * methods are "final" by default, need to be virtual or abstract if not
+ * visibility are littlebit different and you need more internal and public 
+ * if you override a method same visiblity are important
+ * if you override a method with return value, the visible of return type need to be same or more
+ * @Override ==> do not use override keyword for interface methods
+ * do not call variable name same as method name
+ * switch default need a break
+ * java.lang.Boolean.FALSE (false) != System.Boolean.FalseString - add a .ToLower()
+ * generic classes needed types, like Object
 
-generic classes needed types 
+### Streams
 
 Java Streams to C# LINQ see https://blog.lahteenmaki.net/java-streams-vs-c-linq-vs-java6.html 
 
-
+### Class
 the class problems...
 return Class<?> ==> return Type
 MyClass.class ==> typeof(MyClass)
@@ -133,7 +139,47 @@ to
     }
    ```
    
+### catch exception
 
+#### unused exception var
+Unused parameter name in Java like ``ignored`` should be removed. And so on from
+
+   ```java
+   try { omg(); } catch (Exception ignored){}
+   ```
+   
+to
+
+   ```c#
+   try { omg(); } catch (Exception){}
+   ```
+
+#### multiple exceptions
+
+from
+
+   ```java
+   try {
+     doSomethingStupidWithCoffee();
+   }
+   catch (UnsupportedHumanException | NotReallyException ex) {
+     deinstallMySelf();
+   }
+   ```
+   
+to
+
+   ```c#
+     try{
+       doSomethindStupidWithSharp(); 
+     }
+     catch (Exception ex) when (
+       ex is UnsupportedHumanException ||
+       ex is NotRellyException
+     ){
+       deinstallWorld();
+     }
+   ```
 
 ### regular expressions
    * take a look at https://www.generacodice.com/en/articolo/484294/What-is-the-C%23-equivalent-of-java.util.regex 

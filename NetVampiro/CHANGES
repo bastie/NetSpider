@@ -26,6 +26,7 @@
   - java.lang.constant.Constable
   - java.lang.Enum
   - java.util.Arrays.asList bugfix varargs was missing
+  - java.util.Arrays.copyOfRange
   - java.util.Collections.singletonList
   - java.util.Map.entry
   - java.util.Comparator do not declare equals in extension to java.lang Object
