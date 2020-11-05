@@ -59,7 +59,6 @@ namespace org.apache.harmony.security.fortress
             int i = 1;
             java.lang.ClassLoader cl = java.lang.ClassLoader.getSystemClassLoader();
             java.security.Provider p;
-
             while ((providerClassName = java.security.Security.getProperty("security.provider." //$NON-NLS-1$
                     + i++)) != null)
             {

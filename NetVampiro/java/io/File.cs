@@ -175,6 +175,14 @@ namespace biz.ritter.javapi.io
             return info.FullName;
         }
 
+        public String getParent() {
+            return new System.IO.DirectoryInfo(this.getAbsolutePath()).Parent.FullName;
+        }
+
+        public File getParentFile () {
+            return new File(new System.IO.DirectoryInfo(this.getAbsolutePath()).Parent.FullName);
+        }
+
         public bool exists () {
             if (null == this.info) return false;
             if (this.isDirectory())

@@ -1,8 +1,11 @@
 * VampireApi 0.11.0
+  - system property java.home added
   - java.io.File.isAbsolute()
   - java.io.File.isHidden()
   - java.io.File.getAbsoluteFile()
   - java.io.File.toURL()
+  - java.io.File.getParent()
+  - java.io.File.getParentFile()
   - java.nio.file.Files
   - java.nio.file.InvalidPathException
   - java.lang.System.Logger.Level

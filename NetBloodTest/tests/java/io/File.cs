@@ -36,6 +36,30 @@ namespace vampire.test.io
         }
 
         [Test]
+        public void Test_FileParent()
+        {
+          String expected = System.Reflection.Assembly.GetAssembly( typeof(java.lang.SystemJ )).Location;
+          expected = expected.Substring(0, expected.Length - "/VampireApi.dll".Length);
+
+          java.io.File runtimeDll = new java.io.File(System.Reflection.Assembly.GetAssembly( typeof(java.lang.SystemJ )).Location);
+          String actually = runtimeDll.getParent();
+
+          Assert.AreEqual (expected, actually);
+        }
+
+        [Test]
+        public void Test_FileParentFile()
+        {
+          String expected = System.Reflection.Assembly.GetAssembly( typeof(java.lang.SystemJ )).Location;
+          expected = expected.Substring(0, expected.Length - "/VampireApi.dll".Length);
+
+          java.io.File runtimeDll = new java.io.File(System.Reflection.Assembly.GetAssembly( typeof(java.lang.SystemJ )).Location);
+          String actually = runtimeDll.getParentFile().toString();
+
+          Assert.AreEqual (expected, actually);
+        }
+
+        [Test]
         public void Test_FileHidden() 
         {
           switch (System.Environment.OSVersion.Platform)

@@ -138,6 +138,7 @@ namespace biz.ritter.javapi.lang
                         }
                         break;
                 }
+                String javaHome = new java.io.File(System.Reflection.Assembly.GetAssembly(typeof(java.lang.SystemJ)).Location).getParent();
                 
                 // store some Java system specific environment
                 prop.Add("file.encoding", Encoding.Default.WebName);
@@ -169,6 +170,7 @@ namespace biz.ritter.javapi.lang
                 prop.Add("java.class.path", System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location));
                 prop.Add("java.runtime.version","17"); // TODO: implement Java 17 module base!
                 prop.Add("java.runtime.name", "Vampire Runtime Environment");
+                prop.Add("java.home",javaHome); // JAVA_HOME = directory of dll
                 // Java net environment
                 prop.Add("java.protocol.handler.pkgs", "biz.ritter.net.protocol|");
                 // GUI specific environment 
