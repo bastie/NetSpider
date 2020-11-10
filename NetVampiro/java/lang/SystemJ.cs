@@ -191,7 +191,8 @@ namespace biz.ritter.javapi.lang
                 // Preferences properties
                 prop.Add("java.util.prefs.PreferencesFactory", null);
                 // JDBC properties
-                prop.Add("jdbc.drivers", null);
+                if (!prop.containsKey ("jdbc.drivers")) // no prop add for Release 17.0
+                  prop.Add("jdbc.drivers", null); // delimited by :
                 // Apache properties
                 prop.Add("org.apache.xml.namespace.QName.useCompatibleSerialVersionUID", null);
                 // ICU properties

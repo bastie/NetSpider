@@ -379,7 +379,7 @@ namespace biz.ritter.javapi.util
             }
 
             // with Java 9 java.util.Map.entry() method returns an unmodifiable entry an so I need a helper method for my constructor 
-            internal virtual V setReallyValue (V newValue) {
+            internal V setReallyValue (V newValue) {
                 V oldValue = this.value;
                 this.value = newValue;
                 return oldValue;

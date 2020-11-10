@@ -181,6 +181,19 @@ to
      }
    ```
 
+### the unsigned right shift operator
+from
+
+   ```java
+     result = var1 >>> var2
+   ```
+   
+to
+ 
+   ```c#
+     result = (int)((uint)var1 >> var2)
+   ```
+
 ### regular expressions
    * take a look at https://www.generacodice.com/en/articolo/484294/What-is-the-C%23-equivalent-of-java.util.regex 
     

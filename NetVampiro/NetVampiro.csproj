@@ -17,7 +17,7 @@
       <PackageReleaseNotes>just more API</PackageReleaseNotes>
       <IncludeSource>true</IncludeSource>
 
-      <RepositoryUrl>https://github.com/bastie/NetSpider.git</RepositoryUrl>
+      <RepositoryUrl>https://github.com/bastie/NetVampire.git</RepositoryUrl>
       <PackageSummary>Java API for .net</PackageSummary>
       <copyright>Copyright 2011-2020 Sebastian Ritter</copyright>
 

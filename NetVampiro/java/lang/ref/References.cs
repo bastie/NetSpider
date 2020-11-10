@@ -92,7 +92,7 @@ namespace biz.ritter.javapi.lang.refj
          * 
          * @param r the referent
          */
-        protected internal virtual void initReference(Object r) {
+        protected internal virtual void initReference(T r) {
             return;
         }
 
@@ -104,7 +104,7 @@ namespace biz.ritter.javapi.lang.refj
          * @param r the referent
          * @param q the ReferenceQueue
          */
-        protected internal virtual void initReference(Object r, ReferenceQueue<T> q) {
+        protected internal virtual void initReference(T r, ReferenceQueue<T> q) {
             return;
         }
 

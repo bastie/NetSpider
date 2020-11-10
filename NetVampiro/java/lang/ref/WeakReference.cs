@@ -10,7 +10,8 @@
  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
- *  
+ *
+ *  Copyright © 2020 Sebastian Ritter
  */
 
 using System;
@@ -74,14 +75,22 @@ namespace biz.ritter.javapi.lang.refj
      */
     public class WeakReference<T> : Reference<T> {
 
+        ///<summary>Delegate instance</summary>
+        private readonly System.WeakReference instance = new System.WeakReference(default(T));
+        protected bool isEnqueue = false;
+
         /**
          * Constructs a new weak reference to the given referent. The newly created
          * reference is not registered with any reference queue.
          *
          * @param r the referent to track
          */
-        public WeakReference(T r) : base(){
+        public WeakReference(T r) {
             initReference(r);
+        }
+        protected internal override void initReference(T r) {
+            this.instance.Target = r;
+            this.isEnqueue = false;
         }
 
         /**
@@ -93,8 +102,31 @@ namespace biz.ritter.javapi.lang.refj
          *          results in a weak reference that is not associated with any
          *          queue.
          */
-        public WeakReference(T r, ReferenceQueue<T> q) : base() {
-            initReference(r, q);
+        public WeakReference(T r, ReferenceQueue<T> q) {
+            this.initReference(r,q);
         }
+
+         protected internal override void initReference(T r, ReferenceQueue<T> q) {
+            this.instance.Target = r;
+            q.enqueue (this); // CHECKIT: check other java.lang.ref.Refence.java methods to overwrite
+        }
+
+        public override void clear()
+        {
+            this.instance.Target = null;
+        }
+
+        public override T get()
+        {
+            return (T) this.instance.Target;
+        }
+
+        public override bool enqueue() {
+            return this.isEnqueue;
+        }
+        protected internal override bool enqueueImpl() {
+            return false; //no later enqueue implemented
+        }
+
     }
 }
