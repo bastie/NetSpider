@@ -16,14 +16,14 @@
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.lang.concurrent
+namespace biz.ritter.javapi.util.concurrent
 {
     [Serializable]
     public class RejectedExecutionException : java.lang.RuntimeException
     {
         public RejectedExecutionException () : base (){}
         public RejectedExecutionException (String message) : base (message){}
-        public RejectedExecutionException (String message, Throwable cause) : base (message, cause) {}
-        public RejectedExecutionException (Throwable cause) : base(cause) { }
+        public RejectedExecutionException (String message, java.lang.Throwable cause) : base (message, cause) {}
+        public RejectedExecutionException (java.lang.Throwable cause) : base(cause) { }
     }
 }

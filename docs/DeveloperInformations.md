@@ -139,6 +139,43 @@ to
     }
    ```
    
+   
+#### Inner anonymous classes
+Create a non-anonymous inner class and instantiate this instead. This example are from Apache Derby database:
+
+from
+
+   ```java
+   private static ContextService getContextService() {
+     return AccessController.doPrivileged(
+       new PrivilegedAction<ContextService>(){ // => extends new Inner class extends this type 
+         public ContextService run(){ // => copy method in new class
+           return ContextService.getFactory();
+         }
+       }
+     );
+   }
+   ```
+   
+to
+   
+   ```c#
+   private static ContextService getContextService() {
+     return AccessController.doPrivileged(
+       new IAC_PrivilegedAction_getContextService() // <= call new instance of new class instead inner anonymous class
+     );
+   }
+   class IAC_PrivilegedAction_getContextService : PrivilegedAction<ContextService> { // <= extends new Inner class extends this type
+     public ContextService run(){ // <= copy method in new class
+       return ContextService.getFactory(); 
+     }
+   }
+   ```
+
+If from inner anonymous class outer type references, types or methods are called then
+add needed types to constructor in new classes and add save this in the new class as references.
+
+   
 ### catch exception
 
 #### unused exception var

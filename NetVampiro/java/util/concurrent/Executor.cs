@@ -16,7 +16,7 @@
 using System;
 using java = biz.ritter.javapi;
 
-namespace biz.ritter.javapi.lang.concurrent
+namespace biz.ritter.javapi.util.concurrent
 {
     public interface Executor {
         ///<summary>Attention: subtype need to throw java.lang.NullpointerException in result of param command is null.</summary>
