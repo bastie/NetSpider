@@ -23,6 +23,7 @@ To Implement:
  - java.nio.channel (java.io.FileOutputStream.getChannel())
  - java.text.MessageFormat
  - FileLock (see http://social.msdn.microsoft.com/Forums/en-US/csharpgeneral/thread/a5300fc5-126c-4e33-8ae6-13376031e9fe/)
+ - a real java.util.WeakHashMap implementations 
  + Java , this and more
    + source missing
      - java.io.ObjectInputFilter with nested types
@@ -166,8 +167,11 @@ Not implemented:
 String formatting:
 String.format ("Optional[%s]",value); ==> String.Format("Optional[{0}]", value);
 
+Apache Derby database:
+😭 java.util.WeakHashMap is actually not implemented
 
-google-robotstxt-java:
+
+test-port-google-robotstxt-java:
 😎 compileable
 
 Sleep 2.1: 

@@ -28,17 +28,21 @@
   
   
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+    <!--
     <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
-    
+    -->
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <!-- In result of serial id, deactivate 
       - unsued values CS0414
     -->
     <NoWarn>0414</NoWarn>
+    <!-- Because System.Windows.Forms is using, deactivate
+      - incompatible warning NU1701
+    -->
+    <NoWarn>NU1701</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
